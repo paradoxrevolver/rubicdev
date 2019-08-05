@@ -1,0 +1,3 @@
+exclude:
+  - "*.less"
+  - "README.md"

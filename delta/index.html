@@ -1,0 +1,13 @@
+---
+layout:	main
+title:	"rubic.dev :: delta"
+---
+<div class="island">
+    <p>here's a pretty complete collection of weird web stuff i've made:</p>
+    <br>
+    <ul>
+        {% for item in site.data.delta-list %}
+        <li><a href="{{item.link}}">{{item.name}}</a></li>
+        {% endfor %}
+    </ul>
+</div>

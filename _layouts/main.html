@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- hidden header page info -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="rubic, rubicdev, game, development, gamedev, game development, portfolio, paradox, revolver, paradoxrevolver">
+
+    <!-- visible header page info -->
+    <meta name="author" content="rubic">
+    <meta name="description" content="A portfolio website housing my collection of art and programming projects over the years.">
+    <link rel="shortcut icon" href="/assets/media/icon/penrose.ico" type="image/x-icon">
+    <meta name="theme-color" content="#032933" />
+    <title>{{ page.title }}</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/assets/css/reset-pr.css">
+    <link rel="stylesheet" href="/assets/css/default.css">
+
+    <!--scripts-->
+    <script src="/assets/js/cash.min.js"></script>
+    <script src="/assets/js/penrose.js"></script>
+    <script src="/assets/js/starfield.js"></script>
+</head>
+
+<body>
+    <div id="grid-layout" class="cover">
+        <div class="nav-column border-x">
+            <nav>
+                <canvas class="penrose-canvas"></canvas>
+            </nav>
+        </div>
+        <div class="content">
+            {{ content }}
+        </div>
+    </div>
+</body>
+
+</html>
