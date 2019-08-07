@@ -17,22 +17,19 @@
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="/assets/css/reset-pr.css">
-    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/themes/dark.css">
 
-    <!--scripts-->
+    <!-- scripts -->
     <script src="/assets/js/cash.min.js"></script>
-    <script src="/assets/js/penrose.js"></script>
     <script src="/assets/js/starfield.js"></script>
 </head>
 
 <body>
     <div id="grid-layout" class="cover">
-        <div class="nav-column border-x">
-            <nav>
-                <canvas class="penrose-canvas"></canvas>
-            </nav>
+        <div id="navigation" class="border-x">
+            {% include penrose-nav.html %}
         </div>
-        <div class="content">
+        <div id="content">
             {{ content }}
         </div>
     </div>

@@ -19,7 +19,7 @@ this code picks up any div with a class name of "penrose-canvas" and places a sp
 these are any and all code resources that i've used for the site that will still exist on the live version of the site, even if they're packed into code in some form or another.
 
 ##### [Eric Meyer's reset.css](https://meyerweb.com/eric/tools/css/reset/) (with some personal edits)
-good defaults for css that would otherwise look weird. i've adjusted some things here and there.
+good css defaults that would otherwise look weird. i've adjusted some things here and there.
 
 ##### [Cash](https://github.com/kenwheeler/cash)
 a reduced size jquery alternative because i only needed some of the most convenient features

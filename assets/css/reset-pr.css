@@ -3,9 +3,9 @@
    License: none (public domain)
 */
 
-/*	http://rubic.cc/
+/*	http://rubic.dev/
 	Edited by paradoxrevolver aka rubic
-	2019.01.22
+	2019.08.07
 */
 
 html, body, div, span, applet, object, iframe,
@@ -30,6 +30,7 @@ time, mark, audio, video {
 }
 a {
 	display: inline-block;
+    text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
