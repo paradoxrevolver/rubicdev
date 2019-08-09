@@ -1,5 +1,6 @@
 // COLORS
 
+
 // background colors for gradients
 @bg-1: #1d212d;
 @bg-2: #171f2a;
@@ -31,7 +32,7 @@
 // TIMING
 
 @time-sm:   0.4s;
-@time-md:   0.6s;
+@time-md:   0.7s;
 
 // SPACING
 
@@ -47,7 +48,8 @@
 @px-nav-width:  240px;
 @px-con-width:  680px;
 
-@px-penrose:    200px;
+@px-penrose:     200px;
+@px-penrose-m:   72px;
 
 // STYLING DEFAULTS
 
@@ -128,13 +130,19 @@ pre {
         position: relative;
         left: -@sp-xl;
         padding-left: @sp-xl;
+
+        transition-duration: @time-sm;
     }
 }
 
 nav.penrose {
+    position: fixed;
+    left: 0px;
     margin-top: @sp-xl;
     width: @px-penrose;
     height: @px-penrose;
+
+    transition-duration: @time-md;
 }
 
 // IDS
@@ -147,6 +155,7 @@ nav.penrose {
 
 #navigation {
     flex: 0 0 @px-nav-width;
+    width: @px-nav-width;
 
     box-sizing: border-box;
     position: relative;
@@ -158,6 +167,8 @@ nav.penrose {
 
     display: flex;
     justify-content: center;
+
+    transition-duration: @time-md;
 }
 
 #content {
@@ -178,5 +189,12 @@ nav.penrose {
         width: 0;
         margin-left: 0;
         left: -@sp-xl;
+    }
+
+    nav.penrose {
+        left: 84px;
+        margin-top: @sp-md;
+        width: @px-penrose-m;
+        height: @px-penrose-m;
     }
 }
