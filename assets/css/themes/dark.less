@@ -30,7 +30,8 @@
 
 // TIMING
 
-@time-sm: 0.4s;
+@time-sm:   0.4s;
+@time-md:   0.6s;
 
 // SPACING
 
@@ -43,8 +44,8 @@
 
 // PIXEL SIZES
 
-@px-nav-width:  260px;
-@px-con-width:  660px;
+@px-nav-width:  240px;
+@px-con-width:  680px;
 
 @px-penrose:    200px;
 
@@ -73,7 +74,7 @@ pre, code {
 }
 
 pre {
-    border: 1px solid @primary;
+    .border();
     padding: @sp-sm;
     white-space: pre-wrap;
 }
@@ -95,6 +96,7 @@ pre {
 .border {
     box-shadow: 0 0 @sp-sm @glow;
     border: 1px solid @primary;
+    border-radius: 2px;
 }
 .border-x {
     box-shadow: 0 0 @sp-sm @glow;
@@ -106,77 +108,75 @@ pre {
     box-sizing: border-box;
     margin: @sp-xl 0;
 
-    >:not(:last-child) {
+    > :not(:last-child) {
         margin-bottom: @sp-sm;
+    }
+    .title {
+        display: inline-block;
+
+        background: @primary;
+        color: @bg-3;
+        padding: @sp-xs @sp-sm;
+        margin-bottom: @sp-lg;
+
+        /* change text */
+        text-transform: uppercase;
+        text-align: right;
+        letter-spacing: 1pt;
+
+        /* weird side positioning */
+        position: relative;
+        left: -@sp-xl;
+        padding-left: @sp-xl;
     }
 }
 
-h1.subtitle {
-    display: inline-block;
-
-    background: @primary;
-    color: @bg-3;
-    padding: @sp-xs @sp-sm;
-
-    text-transform: uppercase;
-    text-align: right;
-    letter-spacing: 1pt;
-
-    position: relative;
-    left: -@sp-xl;
-    padding-left: @sp-xl;
-
-    transition-duration: @time-sm;
+nav.penrose {
+    margin-top: @sp-xl;
+    width: @px-penrose;
+    height: @px-penrose;
 }
 
 // IDS
 
-#grid-layout {
-    display: grid;
-    grid-template-rows:
-        auto;
-    grid-template-columns:
-        minmax(0, 1fr)
-        @px-nav-width + @sp-xl
-        minmax(0, @px-con-width)
-        minmax(0, 1fr);
-    grid-template-areas:
-        ". nav con .";
+#layout {
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: center;
 }
 
 #navigation {
-    grid-area: nav;
+    flex: 0 0 @px-nav-width;
 
+    box-sizing: border-box;
+    position: relative;
+    left: 0;
     margin-left: @sp-xl;
+
     background: linear-gradient(@bg-2, @bg-4);
     background-attachment: fixed;
 
     display: flex;
     justify-content: center;
-
-    transition-duration: @time-sm;
-
-    nav {
-        margin-top: @sp-xl;
-        width: @px-penrose;
-        height: @px-penrose;
-    }
 }
 
 #content {
-    grid-area: con;
+    flex: 0 1 @px-con-width;
 
-    padding: 0 @sp-xl;
+    margin: 0 @sp-xl;
 }
 
 // pull navigation away on smaller devices
 @media @sm {
-    h1.subtitle {
+    .island .title {
         left: -@sp-sm;
         padding-left: @sp-sm;
     }
 
     #navigation {
-
+        flex: 0 0 0;
+        width: 0;
+        margin-left: 0;
+        left: -@sp-xl;
     }
 }

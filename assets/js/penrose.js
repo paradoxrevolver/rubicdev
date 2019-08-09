@@ -594,8 +594,8 @@ let penrose = function(canvas) {
 		// change the size of the penrose parent to ocsillate
 		if(_.DEBUG.BREATHING_EFFECT) {
 			_.ResizeParentBreathe();
-			_.UpdateCanvasDimensions();
-		}
+        }
+        _.UpdateCanvasDimensions();
 		// update everything
 		_.Update();
 		// render everything to the canvas

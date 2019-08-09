@@ -30,7 +30,9 @@ code {
   font: 12pt Anonymous Pro, monospace;
 }
 pre {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
   border: 1px solid #ffffff;
+  border-radius: 2px;
   padding: 12px;
   white-space: pre-wrap;
 }
@@ -47,6 +49,7 @@ pre {
 .border {
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
   border: 1px solid #ffffff;
+  border-radius: 2px;
 }
 .border-x {
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
@@ -60,46 +63,55 @@ pre {
 .island > :not(:last-child) {
   margin-bottom: 12px;
 }
-h1.subtitle {
+.island .title {
   display: inline-block;
   background: #ffffff;
   color: #032933;
   padding: 6px 12px;
+  margin-bottom: 24px;
+  /* change text */
   text-transform: uppercase;
   text-align: right;
   letter-spacing: 1pt;
+  /* weird side positioning */
   position: relative;
   left: -36px;
   padding-left: 36px;
-  transition-duration: 0.4s;
 }
-#grid-layout {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: minmax(0, 1fr) 296px minmax(0, 660px) minmax(0, 1fr);
-  grid-template-areas: ". nav con .";
+nav.penrose {
+  margin-top: 36px;
+  width: 200px;
+  height: 200px;
+}
+#layout {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: center;
 }
 #navigation {
-  grid-area: nav;
+  flex: 0 0 240px;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
   margin-left: 36px;
   background: linear-gradient(#171f2a, #03303b);
   background-attachment: fixed;
   display: flex;
   justify-content: center;
-  transition-duration: 0.4s;
-}
-#navigation nav {
-  margin-top: 36px;
-  width: 200px;
-  height: 200px;
 }
 #content {
-  grid-area: con;
-  padding: 0 36px;
+  flex: 0 1 680px;
+  margin: 0 36px;
 }
 @media only screen and (max-width: 767.98px) {
-  h1.subtitle {
+  .island .title {
     left: -12px;
     padding-left: 12px;
+  }
+  #navigation {
+    flex: 0 0 0;
+    width: 0;
+    margin-left: 0;
+    left: -36px;
   }
 }

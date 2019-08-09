@@ -3,4 +3,17 @@ layout: main
 title:  "rubic.dev :: penrose"
 ---
 
-{% include penrose-nav.html %}
+<div class="island">
+    <h1 class="title">penrose navigation</h1>
+    <div class="penrose-holder">
+        {% include penrose-nav.html %}
+    </div>
+</div>
+
+<style>
+    .penrose-holder {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+</style>
