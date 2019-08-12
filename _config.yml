@@ -1,3 +1,9 @@
+defaults:
+  - scope:
+      path: "assets/media/img/art"
+    values:
+      image: true
+      art: true
 exclude:
   - "*.less"
   - "README.md"

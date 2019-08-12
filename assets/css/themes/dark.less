@@ -5,13 +5,17 @@
 @bg-1: #1d212d;
 @bg-2: #171f2a;
 @bg-3: #032933;
-@bg-4: #03303b;
+@bg-4: #032f3a;
 
-@selection: rgba(0, 155, 224, 0.65);
-@link: rgb(71, 239, 207);
-@glow: rgba(255, 255, 255, 0.10);
+@grad-1:    linear-gradient(@bg-1, @bg-3);
+@grad-2:    linear-gradient(@bg-2, @bg-4);
 
-@primary: #ffffff;
+@selection: hsla(198, 100%, 44%, 0.65);
+@link: hsl(169, 84%, 61%);
+@glow: hsla(0, 0%, 100%, 0.1);
+
+@primary:   hsl(0, 0%, 100%);
+@secondary: hsl(180, 92%, 31%);
 
 // FONTS
 
@@ -25,15 +29,6 @@
 
 @code-md: 12pt Anonymous Pro, monospace;
 
-// MEDIA QUERIES
-
-@sm:    ~"only screen and (max-width: 767.98px)";
-
-// TIMING
-
-@time-sm:   0.4s;
-@time-md:   0.7s;
-
 // SPACING
 
 @sp-xxs:    3px;
@@ -45,11 +40,22 @@
 
 // PIXEL SIZES
 
-@px-nav-width:  240px;
-@px-con-width:  680px;
+@px-nav-width:      240px;
+@px-con-width:      680px;
 
-@px-penrose:     200px;
-@px-penrose-m:   72px;
+@px-penrose:        200px;
+@px-penrose-mini:   72px;
+
+@px-penrose-margin-x:   (@px-nav-width - @px-penrose)/2;
+
+// MEDIA QUERIES
+
+@sm:    ~"only screen and (max-width: 767.98px)";
+
+// TIMING
+
+@time-sm:   0.4s;
+@time-md:   0.7s;
 
 // STYLING DEFAULTS
 
@@ -57,7 +63,7 @@ body {
     font: @body-md;
     color: @primary;
 
-    background: linear-gradient(@bg-1, @bg-3);
+    background: @grad-1;
     background-attachment: fixed;
 }
 
@@ -86,6 +92,21 @@ pre {
     color: @primary;
 }
 
+::-webkit-scrollbar {
+    background: @grad-1;
+    height: @sp-xxs;
+    width: @sp-xxs;
+
+    &-thumb {
+        background: @primary;
+    }
+}
+
+body {
+    scrollbar-color: @primary hsla(0, 0%, 0%, 0.01);
+    scrollbar-width: @sp-xxs;
+}
+
 // CLASSES
 
 .cover {
@@ -98,7 +119,7 @@ pre {
 .border {
     box-shadow: 0 0 @sp-sm @glow;
     border: 1px solid @primary;
-    border-radius: 2px;
+    border-radius: 1px;
 }
 .border-x {
     box-shadow: 0 0 @sp-sm @glow;
@@ -113,6 +134,7 @@ pre {
     > :not(:last-child) {
         margin-bottom: @sp-sm;
     }
+
     .title {
         display: inline-block;
 
@@ -126,55 +148,103 @@ pre {
         text-align: right;
         letter-spacing: 1pt;
 
-        /* weird side positioning */
-        position: relative;
-        left: -@sp-xl;
-        padding-left: @sp-xl;
+        a {
+            margin: -@sp-xs -@sp-sm;
+            padding: @sp-xs @sp-sm;
+            color: @bg-3;
 
-        transition-duration: @time-sm;
+            &:hover { color: @secondary; }
+            &:active { color: lighten(@secondary, 10%); }
+        }
     }
-}
-
-nav.penrose {
-    position: fixed;
-    left: 0px;
-    margin-top: @sp-xl;
-    width: @px-penrose;
-    height: @px-penrose;
-
-    transition-duration: @time-md;
 }
 
 // IDS
 
 #layout {
+    /* major page elements are just a flex row */
     display: flex;
-    flex-direction: row nowrap;
+    flex-flow: row nowrap;
     justify-content: center;
 }
 
 #navigation {
-    flex: 0 0 @px-nav-width;
-    width: @px-nav-width;
-
     box-sizing: border-box;
-    position: relative;
-    left: 0;
-    margin-left: @sp-xl;
 
-    background: linear-gradient(@bg-2, @bg-4);
+    background: @grad-2;
     background-attachment: fixed;
 
     display: flex;
     justify-content: center;
-
-    transition-duration: @time-md;
 }
 
 #content {
     flex: 0 1 @px-con-width;
 
     margin: 0 @sp-xl;
+}
+
+#art {
+    .gallery {
+        width: 100%;
+
+        display: flex;
+        flex-flow: row nowrap;
+
+        .frame:not(:last-child) {
+            margin-right: @sp-sm;
+        }
+
+        .frame {
+            box-sizing: border-box;
+            height: 400px;
+            flex: 1 1 72px;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 400px;
+            }
+        }
+    }
+}
+
+// ADAPTABILITY
+
+.island .title {
+    transition-duration: @time-sm;
+
+    position: relative;
+
+    left: -@sp-xl;
+    padding-left: @sp-xl;
+}
+
+#navigation {
+    transition-duration: @time-md;
+
+    position: relative;
+
+    flex: 0 0 @px-nav-width;
+    left: 0;
+    width: @px-nav-width;
+    margin-left: @sp-xl;
+}
+
+nav.penrose {
+    transition-duration: @time-md;
+
+    position: sticky;
+    top: @sp-xl;
+
+    // left doesn't do anything with sticky
+    // it's just here for when a media query sets the position to fixed
+    left: @sp-xl + @px-penrose-margin-x;
+
+    width: @px-penrose;
+    height: @px-penrose;
 }
 
 // pull navigation away on smaller devices
@@ -186,15 +256,23 @@ nav.penrose {
 
     #navigation {
         flex: 0 0 0;
+        left: -(@px-penrose/2);
         width: 0;
         margin-left: 0;
-        left: -@sp-xl;
     }
 
     nav.penrose {
-        left: 84px;
-        margin-top: @sp-md;
-        width: @px-penrose-m;
-        height: @px-penrose-m;
+        position: fixed;
+
+        left: @sp-lg;
+        width: @px-penrose-mini;
+        height: @px-penrose-mini;
+    }
+
+    nav.penrose {
+        // while penrose v2.0 isn't done, just shove it off screen
+        left: -(@px-penrose + @sp-xl);
+        width: @px-penrose;
+        height: @px-penrose;
     }
 }

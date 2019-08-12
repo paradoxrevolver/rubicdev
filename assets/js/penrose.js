@@ -95,13 +95,13 @@ let penrose = function(canvas) {
 				url: "/delta",
 				FollowUrl: () => {
 					// if the current penrose progress is not one...
-					if( _.penroseProgress.current < 0.25 ) {
+                    if( _.penroseProgress.current < 0.25 ) {
 						// this link just scrolls to the top of the page
 						window.scroll({
 							top: 0,
 							left: 0,
 							behavior: 'smooth'
-						});
+                        });
 					}
 					else
 						// otherwise, it secretly takes you to delta
