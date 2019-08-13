@@ -112,26 +112,33 @@ body {
 }
 #content {
   flex: 0 1 680px;
+  min-width: 0;
   margin: 0 36px;
 }
 #art .gallery {
-  width: 100%;
   display: flex;
-  flex-flow: row nowrap;
-}
-#art .gallery .frame:not(:last-child) {
-  margin-right: 12px;
+  flex-flow: row wrap;
+  margin: -12px;
 }
 #art .gallery .frame {
   box-sizing: border-box;
-  height: 400px;
-  flex: 1 1 72px;
+  flex: 1 1 32px;
   overflow: hidden;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 12px;
 }
 #art .gallery .frame img {
   height: 400px;
+}
+@media only screen and (max-width: 499.98px) {
+  #art .gallery {
+    flex-flow: column nowrap;
+  }
+  #art .gallery .frame {
+    flex: 1 1 64px;
+  }
 }
 .island .title {
   transition-duration: 0.4s;

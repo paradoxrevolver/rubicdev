@@ -50,6 +50,7 @@
 
 // MEDIA QUERIES
 
+@xs:    ~"only screen and (max-width: 499.98px)";
 @sm:    ~"only screen and (max-width: 767.98px)";
 
 // TIMING
@@ -180,32 +181,39 @@ body {
 
 #content {
     flex: 0 1 @px-con-width;
+    min-width: 0;
 
     margin: 0 @sp-xl;
 }
 
 #art {
     .gallery {
-        width: 100%;
-
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
 
-        .frame:not(:last-child) {
-            margin-right: @sp-sm;
-        }
+        margin: -@sp-sm;
 
         .frame {
             box-sizing: border-box;
-            height: 400px;
-            flex: 1 1 72px;
+            flex: 1 1 32px;
             overflow: hidden;
 
             display: flex;
             justify-content: center;
+            align-items: center;
+
+            margin: @sp-sm;
 
             img {
                 height: 400px;
+            }
+        }
+
+        @media @xs {
+            flex-flow: column nowrap;
+
+            .frame {
+                flex: 1 1 64px;
             }
         }
     }
