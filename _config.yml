@@ -1,4 +1,5 @@
 defaults:
+  # images that appear in the art gallery
   - scope:
       path: "assets/media/img/art"
     values:

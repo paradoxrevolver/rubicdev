@@ -6,44 +6,36 @@
 	It generates a background of interactable drifting pixelated stars.
 */
 let starfield = function(canvas) {
-	if(!(canvas instanceof HTMLElement))
-		throw "starfield.js looked for elements with the class \"starfield-canvas\" but did not receive an HTMLElement";
+  if(!(canvas instanceof HTMLElement))
+    throw "starfield instance did not receive an HTMLElement";
 
-	let _ = this;
-	let starfieldCanv = canvas;
-	let s = canvas.getContext('2d', {
-		alpha: true
-	});
+  let _ = this;
+  let starfieldCanv = canvas;
+  let s = canvas.getContext('2d', {
+    alpha: true
+  });
 
-	// initialization
-	_.Init = function() {
-		let DEBUG = {
+  _.Update = function() {
 
-		};
-	}
+  }
 
-	_.Update = function() {
+  // run once for every animation frame
+  _.Step = function() {
+    // update values
+    _.Update();
+    // get a new animation frame
+    window.requestAnimationFrame(_.Step);
+  }
 
-	}
-
-	// run once for every animation frame
-	_.Step = function() {
-
-		// update values
-		_.Update();
-		// get a new animation frame
-		window.requestAnimationFrame(_.Step);
-	}
-
-	_.Init();
-	// a single update before the first step
-	_.Update();
-	_.Step();
+  _.Step();
 }
 
-$(document).ready(() => {
-	let elements = $(".starfield-canvas");
-	Array.from(elements).forEach((canvas) => {
-		new starfield(canvas);
-	})
-});
+// inner scope so currentScript is scoped to this script
+{
+  let currentScript = document.currentScript;
+  // runs when page is ready
+  $(() => {
+    let canvas = $(currentScript).siblings('canvas.starfield-canvas')[0];
+    new starfield(canvas);
+  });
+}

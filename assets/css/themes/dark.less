@@ -1,286 +1,263 @@
-// COLORS
-
-
+/* COLORS */
 // background colors for gradients
 @bg-1: #1d212d;
 @bg-2: #171f2a;
 @bg-3: #032933;
 @bg-4: #032f3a;
-
-@grad-1:    linear-gradient(@bg-1, @bg-3);
-@grad-2:    linear-gradient(@bg-2, @bg-4);
-
+@grad-1: linear-gradient(@bg-1, @bg-3);
+@grad-2: linear-gradient(@bg-2, @bg-4);
 @selection: hsla(198, 100%, 44%, 0.65);
 @link: hsl(169, 84%, 61%);
 @glow: hsla(0, 0%, 100%, 0.1);
-
-@primary:   hsl(0, 0%, 100%);
-@secondary: hsl(180, 92%, 31%);
-
-// FONTS
-
-@font-face { font-family: Anonymous Pro; 	src: url('/assets/media/font/AnonymousPro-Regular.ttf'); }
-@font-face { font-family: Rubik; 			src: url('/assets/media/font/Rubik-Regular.ttf'); }
-
+@primary: hsl(0, 0%, 100%);
+@secondary: hsl(180, 92%, 31%); /* FONTS */
+@font-face {
+  font-family: Anonymous Pro;
+  src: url("/assets/media/font/AnonymousPro-Regular.ttf");
+}
+@font-face {
+  font-family: Rubik;
+  src: url("/assets/media/font/Rubik-Regular.ttf");
+}
 @title-md: bold 14pt Rubik, sans-serif;
-
 @body-md: 11pt Rubik, sans-serif;
 @body-lg: 18pt Rubik, sans-serif;
+@code-md: 12pt Anonymous Pro, monospace; /* SPACING */
+@sp-xxs: 3px;
+@sp-xs: 6px;
+@sp-sm: 12px;
+@sp-md: 18px;
+@sp-lg: 24px;
+@sp-xl: 36px; /* PIXEL SIZES */
+@px-nav-width: 240px;
+@px-con-width: 680px;
+@px-penrose: 200px;
+@px-penrose-mini: 72px;
+@px-penrose-margin-x: (@px-nav-width - @px-penrose)/2; /* MEDIA QUERIES */
+@xs: ~"only screen and (max-width: 499.98px)";
+@sm: ~"only screen and (max-width: 767.98px)"; /* TIMING */
+@time-sm: 0.4s;
+@time-md: 0.7s;
 
-@code-md: 12pt Anonymous Pro, monospace;
-
-// SPACING
-
-@sp-xxs:    3px;
-@sp-xs:     6px;
-@sp-sm:     12px;
-@sp-md:     18px;
-@sp-lg:     24px;
-@sp-xl:     36px;
-
-// PIXEL SIZES
-
-@px-nav-width:      240px;
-@px-con-width:      680px;
-
-@px-penrose:        200px;
-@px-penrose-mini:   72px;
-
-@px-penrose-margin-x:   (@px-nav-width - @px-penrose)/2;
-
-// MEDIA QUERIES
-
-@xs:    ~"only screen and (max-width: 499.98px)";
-@sm:    ~"only screen and (max-width: 767.98px)";
-
-// TIMING
-
-@time-sm:   0.4s;
-@time-md:   0.7s;
-
-// STYLING DEFAULTS
+/* STYLING DEFAULTS */
 
 body {
-    font: @body-md;
-    color: @primary;
-
-    background: @grad-1;
-    background-attachment: fixed;
+  font: @body-md;
+  color: @primary;
+  background: @grad-1;
+  background-attachment: fixed;
 }
 
 h1 {
-    font: @title-md;
+  font: @title-md;
 }
 
 a {
+  color: @link;
+
+  &:visited {
     color: @link;
-    &:visited { color: @link; }
-    &:hover { color: @primary; }
+  }
+
+  &:hover {
+    color: @primary;
+  }
 }
 
-pre, code {
-    font: @code-md;
+code,
+pre {
+  font: @code-md;
 }
 
 pre {
-    .border();
-    padding: @sp-sm;
-    white-space: pre-wrap;
+  .border();
+  padding: @sp-sm;
+  white-space: pre-wrap;
 }
+/* SCROLLBAR CHANGES */
+// chrome scrollbars
 
 ::selection {
-    background-color: @selection;
-    color: @primary;
+  background-color: @selection;
+  color: @primary;
 }
 
 ::-webkit-scrollbar {
-    background: @grad-1;
-    height: @sp-xxs;
-    width: @sp-xxs;
+  background: @grad-1;
+  height: @sp-xxs;
+  width: @sp-xxs;
 
-    &-thumb {
-        background: @primary;
-    }
+  &-thumb {
+    background: @primary;
+  }
 }
+// firefox scrollbars
 
 body {
-    scrollbar-color: @primary hsla(0, 0%, 0%, 0.01);
-    scrollbar-width: @sp-xxs;
+  scrollbar-color: @primary hsla(0, 0%, 0%, 0.01);
+  scrollbar-width: @sp-xxs;
 }
 
-// CLASSES
+/* GENERAL CLASSES */
+// div is the size of the page
 
 .cover {
-    position: relative;
-    top: 0;
-    left: 0;
-    min-height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 100%;
 }
+// div
 
 .border {
-    box-shadow: 0 0 @sp-sm @glow;
-    border: 1px solid @primary;
-    border-radius: 1px;
+  box-shadow: 0 0 @sp-sm @glow;
+  border: 1px solid @primary;
+  border-radius: 1px;
 }
+
 .border-x {
-    box-shadow: 0 0 @sp-sm @glow;
-    border-left: 1px solid @primary;
-    border-right: 1px solid @primary;
+  box-shadow: 0 0 @sp-sm @glow;
+  border-left: 1px solid @primary;
+  border-right: 1px solid @primary;
 }
+// represents one body of content
 
 .island {
-    box-sizing: border-box;
-    margin: @sp-xl 0;
+  box-sizing: border-box;
+  margin: @sp-xl 0;
 
-    > :not(:last-child) {
-        margin-bottom: @sp-sm;
+  > :not(:last-child) {
+    margin-bottom: @sp-sm;
+  }
+
+  .title {
+    display: inline-block;
+    background: @primary;
+    color: @bg-3;
+    padding: @sp-xs @sp-sm;
+    margin-bottom: @sp-lg;
+    /* change text */
+    text-transform: uppercase;
+    text-align: right;
+    letter-spacing: 1pt;
+
+    a {
+      margin: -@sp-xs -@sp-sm;
+      padding: @sp-xs @sp-sm;
+      color: @bg-3;
+
+      &:hover {
+        color: @secondary;
+      }
+
+      &:active {
+        color: lighten(@secondary, 10%);
+      }
     }
-
-    .title {
-        display: inline-block;
-
-        background: @primary;
-        color: @bg-3;
-        padding: @sp-xs @sp-sm;
-        margin-bottom: @sp-lg;
-
-        /* change text */
-        text-transform: uppercase;
-        text-align: right;
-        letter-spacing: 1pt;
-
-        a {
-            margin: -@sp-xs -@sp-sm;
-            padding: @sp-xs @sp-sm;
-            color: @bg-3;
-
-            &:hover { color: @secondary; }
-            &:active { color: lighten(@secondary, 10%); }
-        }
-    }
+  }
 }
-
-// IDS
+/* SPECIFIC IDS */
 
 #layout {
-    /* major page elements are just a flex row */
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+  /* major page elements are just a flex row */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
 
 #navigation {
-    box-sizing: border-box;
-
-    background: @grad-2;
-    background-attachment: fixed;
-
-    display: flex;
-    justify-content: center;
+  box-sizing: border-box;
+  background: @grad-2;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
 }
 
 #content {
-    flex: 0 1 @px-con-width;
-    min-width: 0;
-
-    margin: 0 @sp-xl;
+  flex: 0 1 @px-con-width;
+  min-width: 0;
+  margin: 0 @sp-xl;
 }
 
-#art {
-    .gallery {
-        display: flex;
-        flex-flow: row wrap;
+#art-gallery {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: -@sp-sm;
 
-        margin: -@sp-sm;
+  .frame {
+    box-sizing: border-box;
+    flex: 1 1 32px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: @sp-sm;
 
-        .frame {
-            box-sizing: border-box;
-            flex: 1 1 32px;
-            overflow: hidden;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            margin: @sp-sm;
-
-            img {
-                height: 400px;
-            }
-        }
-
-        @media @xs {
-            flex-flow: column nowrap;
-
-            .frame {
-                flex: 1 1 64px;
-            }
-        }
+    img {
+      height: 400px;
     }
-}
+  }
+  @media @xs {
+    flex-flow: column nowrap;
 
+    .frame {
+      flex: 1 1 64px;
+    }
+  }
+}
 // ADAPTABILITY
 
 .island .title {
-    transition-duration: @time-sm;
-
-    position: relative;
-
-    left: -@sp-xl;
-    padding-left: @sp-xl;
+  transition-duration: @time-sm;
+  position: relative;
+  left: -@sp-xl;
+  padding-left: @sp-xl;
 }
 
 #navigation {
-    transition-duration: @time-md;
-
-    position: relative;
-
-    flex: 0 0 @px-nav-width;
-    left: 0;
-    width: @px-nav-width;
-    margin-left: @sp-xl;
+  transition-duration: @time-md;
+  position: relative;
+  flex: 0 0 @px-nav-width;
+  left: 0;
+  width: @px-nav-width;
+  margin-left: @sp-xl;
 }
 
 nav.penrose {
-    transition-duration: @time-md;
-
-    position: sticky;
-    top: @sp-xl;
-
-    // left doesn't do anything with sticky
-    // it's just here for when a media query sets the position to fixed
-    left: @sp-xl + @px-penrose-margin-x;
-
-    width: @px-penrose;
-    height: @px-penrose;
+  transition-duration: @time-md;
+  position: sticky;
+  top: @sp-xl;
+  // left doesn't do anything with sticky
+  // it's just here for when a media query sets the position to fixed
+  left: @sp-xl + @px-penrose-margin-x;
+  width: @px-penrose;
+  height: @px-penrose;
 }
-
 // pull navigation away on smaller devices
 @media @sm {
-    .island .title {
-        left: -@sp-sm;
-        padding-left: @sp-sm;
-    }
+  .island .title {
+    left: -@sp-sm;
+    padding-left: @sp-sm;
+  }
 
-    #navigation {
-        flex: 0 0 0;
-        left: -(@px-penrose/2);
-        width: 0;
-        margin-left: 0;
-    }
+  #navigation {
+    flex: 0 0 0;
+    left: -(@px-penrose/2);
+    width: 0;
+    margin-left: 0;
+  }
 
-    nav.penrose {
-        position: fixed;
+  nav.penrose {
+    position: fixed;
+    left: @sp-lg;
+    width: @px-penrose-mini;
+    height: @px-penrose-mini;
+  }
 
-        left: @sp-lg;
-        width: @px-penrose-mini;
-        height: @px-penrose-mini;
-    }
-
-    nav.penrose {
-        // while penrose v2.0 isn't done, just shove it off screen
-        left: -(@px-penrose + @sp-xl);
-        width: @px-penrose;
-        height: @px-penrose;
-    }
+  nav.penrose {
+    // while penrose v2.0 isn't done, just shove it off screen
+    left: -(@px-penrose + @sp-xl);
+    width: @px-penrose;
+    height: @px-penrose;
+  }
 }

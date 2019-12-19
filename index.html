@@ -3,33 +3,42 @@ layout: main
 title: "rubic.dev"
 ---
 <div id="me" class="island">
-    <h1 class="title"><a href="#me">me</a></h1>
-    <p>my name is rubic, paradoxrevolver, or you can call me adam.</p>
+  <h1 class="title"><a href="#me">me</a></h1>
+  <p>my name is rubic, paradoxrevolver, or you can call me adam.</p>
 
-    <p>this website is rubic.dev, home to all the projects and parts i've worked on over the years.</p>
+  <p>this website is rubic.dev, home to all the projects and parts i've worked on over the years.</p>
 
-    <p>i'm an artist, programmer, and game designer that enjoys creating things that look nice and work well. i'm currently a student at San Jose State University graduating in fall 2020 with a Bachelor of Science in Software Engineering and a minor in Mathematics.</p>
+  <p>i'm an artist, programmer, and game designer that enjoys creating things that look nice and work well. i'm currently a student at San Jose State University graduating in fall 2020 with a Bachelor's degree in Software Engineering and a minor in Mathematics.</p>
 
-    <p>my goal is to find a place in game development where i can write code, draw art, and feel passionate about designing an unforgettable game.</p>
+  <p>my goal is to find a place in game development where i can write code, draw art, and design experiences that inspire others.</p>
 </div>
 
 <div id="art" class="island">
-    <h1 class="title"><a href="#art">art</a></h1>
-    {% include art-gallery.html %}
+  <h1 class="title"><a href="#art">art</a></h1>
+
+  <div id="art-gallery">
+    {% assign image_list = site.static_files | where: "image", true | where: "art", true %}
+    {% for image in image_list %}
+    <div class="frame border">
+      <img class="border-x" src="{{image.path}}">
+    </div>
+    {% endfor %}
+  </div>
+  <script src="/assets/js/art-gallery.js"></script>
 </div>
 
 <div id="code" class="island">
-    <h1 class="title"><a href="#code">code</a></h1>
+  <h1 class="title"><a href="#code">code</a></h1>
 </div>
 
 <div id="sound" class="island">
-    <h1 class="title"><a href="#sound">sound</a></h1>
+  <h1 class="title"><a href="#sound">sound</a></h1>
 </div>
 
 <div id="design" class="island">
-    <h1 class="title"><a href="#design">design</a></h1>
+  <h1 class="title"><a href="#design">design</a></h1>
 </div>
 
 <div id="connect" class="island">
-    <h1 class="title"><a href="#connect">connect</a></h1>
+  <h1 class="title"><a href="#connect">connect</a></h1>
 </div>
