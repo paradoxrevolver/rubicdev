@@ -42,8 +42,8 @@ html, body {
 	height: 100%;
 	width: 100%;
 }
-ol, ul {
-	list-style: none;
+li {
+	margin-left: 12pt;
 }
 blockquote, q {
 	quotes: none;

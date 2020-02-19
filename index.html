@@ -5,11 +5,11 @@ title: "rubic.dev"
 <div id="me" class="island">
   <h1 class="title"><a href="#me">me</a></h1>
   <p>my name is rubic, paradoxrevolver, or you can call me adam.</p>
-
+  
   <p>this website is rubic.dev, home to all the projects and parts i've worked on over the years.</p>
-
-  <p>i'm an artist, programmer, and game designer that enjoys creating things that look nice and work well. i'm currently a student at San Jose State University graduating in fall 2020 with a Bachelor's degree in Software Engineering and a minor in Mathematics.</p>
-
+  
+  <p>i'm an artist, programmer, and game designer that enjoys creating useful tools and clever games. i'm currently a student at San Jose State University graduating in fall 2020 with a Bachelor's degree in Software Engineering and a minor in Mathematics.</p>
+  
   <p>my goal is to find a place in game development where i can write code, draw art, and design experiences that inspire others.</p>
 </div>
 
@@ -17,10 +17,13 @@ title: "rubic.dev"
   <h1 class="title"><a href="#art">art</a></h1>
 
   <div id="art-gallery">
-    {% assign image_list = site.static_files | where: "image", true | where: "art", true %}
+    {% assign image_list = site.static_files | where: "art", true %}
     {% for image in image_list %}
     <div class="frame border">
       <img class="border-x" src="{{image.path}}">
+      <div class="toolbar">
+        <a class="tool" href="{{image.path}}" target="_blank"><i class="far fa-file-image"></i></a>
+      </div>
     </div>
     {% endfor %}
   </div>
@@ -29,14 +32,26 @@ title: "rubic.dev"
 
 <div id="code" class="island">
   <h1 class="title"><a href="#code">code</a></h1>
+
+  <div id="code-gallery">
+
+  </div>
 </div>
 
 <div id="sound" class="island">
   <h1 class="title"><a href="#sound">sound</a></h1>
+
+  <div id="sound-gallery">
+    
+  </div>
 </div>
 
 <div id="design" class="island">
   <h1 class="title"><a href="#design">design</a></h1>
+
+  <div id="design-gallery">
+    
+  </div>
 </div>
 
 <div id="connect" class="island">

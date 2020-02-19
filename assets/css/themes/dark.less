@@ -1,4 +1,5 @@
 /* COLORS */
+
 // background colors for gradients
 @bg-1: #1d212d;
 @bg-2: #171f2a;
@@ -6,11 +7,14 @@
 @bg-4: #032f3a;
 @grad-1: linear-gradient(@bg-1, @bg-3);
 @grad-2: linear-gradient(@bg-2, @bg-4);
-@selection: hsla(198, 100%, 44%, 0.65);
+@selection: hsla(177, 100%, 44%, 0.54);
 @link: hsl(169, 84%, 61%);
 @glow: hsla(0, 0%, 100%, 0.1);
 @primary: hsl(0, 0%, 100%);
-@secondary: hsl(180, 92%, 31%); /* FONTS */
+@secondary: hsl(180, 92%, 31%); 
+
+/* FONTS */
+
 @font-face {
   font-family: Anonymous Pro;
   src: url("/assets/media/font/AnonymousPro-Regular.ttf");
@@ -20,26 +24,48 @@
   src: url("/assets/media/font/Rubik-Regular.ttf");
 }
 @title-md: bold 14pt Rubik, sans-serif;
+@body-xs: italic 9pt Rubik, sans-serif;
+@body-sm: bold 10pt Rubik, sans-serif;
 @body-md: 11pt Rubik, sans-serif;
 @body-lg: 18pt Rubik, sans-serif;
-@code-md: 12pt Anonymous Pro, monospace; /* SPACING */
+@body-xl: 24pt Rubik, sans-serif;
+@code-md: 12pt Anonymous Pro, monospace; 
+
+/* SPACING */
+
 @sp-xxs: 3px;
 @sp-xs: 6px;
 @sp-sm: 12px;
 @sp-md: 18px;
 @sp-lg: 24px;
-@sp-xl: 36px; /* PIXEL SIZES */
+@sp-xl: 36px; 
+
+/* PIXEL SIZES */
+
 @px-nav-width: 240px;
 @px-con-width: 680px;
 @px-penrose: 200px;
 @px-penrose-mini: 72px;
-@px-penrose-margin-x: (@px-nav-width - @px-penrose)/2; /* MEDIA QUERIES */
+@px-penrose-margin-x: (@px-nav-width - @px-penrose)/2; 
+
+/* MEDIA QUERIES */
+
 @xs: ~"only screen and (max-width: 499.98px)";
-@sm: ~"only screen and (max-width: 767.98px)"; /* TIMING */
+@sm: ~"only screen and (max-width: 859.98px)"; 
+
+/* TIMING */
+
 @time-sm: 0.4s;
 @time-md: 0.7s;
 
 /* STYLING DEFAULTS */
+
+h1 { font: @title-md; }
+h2 { font: @body-xl; }
+h3 { font: @body-lg; }
+h4 { font: @body-md; font-weight: bold; }
+h5 { font: @body-sm; }
+h6 { font: @body-xs; }
 
 body {
   font: @body-md;
@@ -48,35 +74,40 @@ body {
   background-attachment: fixed;
 }
 
-h1 {
-  font: @title-md;
-}
-
 a {
   color: @link;
 
-  &:visited {
-    color: @link;
-  }
-
-  &:hover {
-    color: @primary;
-  }
+  &:visited { color: @link; }
+  &:hover { color: @primary; }
 }
 
-code,
-pre {
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+code {
   font: @code-md;
+  padding: 2pt 4pt;
+  background-color: fade(@selection, 20%);
+  border-radius: 3px;
 }
 
 pre {
   .border();
   padding: @sp-sm;
   white-space: pre-wrap;
+  background-color: fade(@selection, 15%);
+  min-height: 10pt;
+  max-height: 100pt;
+  overflow-y: scroll;
+}
+
+pre code {
+  background-color: initial;
+  padding: 0;
 }
 /* SCROLLBAR CHANGES */
-// chrome scrollbars
 
+// chrome scrollbars
 ::selection {
   background-color: @selection;
   color: @primary;
@@ -84,15 +115,15 @@ pre {
 
 ::-webkit-scrollbar {
   background: @grad-1;
-  height: @sp-xxs;
-  width: @sp-xxs;
+  height: @sp-sm;
+  width: @sp-sm;
 
   &-thumb {
     background: @primary;
   }
 }
-// firefox scrollbars
 
+// firefox scrollbars
 body {
   scrollbar-color: @primary hsla(0, 0%, 0%, 0.01);
   scrollbar-width: @sp-xxs;
@@ -130,7 +161,7 @@ body {
     margin-bottom: @sp-sm;
   }
 
-  .title {
+  h1.title {
     display: inline-block;
     background: @primary;
     color: @bg-3;
@@ -156,6 +187,35 @@ body {
     }
   }
 }
+
+.toolbar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  
+  a.tool {
+    width: @sp-xl;
+    height: @sp-xl;
+    margin: 0 @sp-xs @sp-xs 0;
+    font: @body-md;
+    color: @primary;
+    background-color: fade(@bg-1, 50%);
+    border: 1px solid @primary;
+    border-radius: 2px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i { display: block; }
+
+    &:hover {
+      color: @link;
+      background-color: fade(@link, 20%);
+      border: 1px solid @link;
+    }
+  }
+}
+
 /* SPECIFIC IDS */
 
 #layout {
@@ -183,31 +243,62 @@ body {
   display: flex;
   flex-flow: row nowrap;
   margin: -@sp-sm;
-
+  
   .frame {
+    position: relative;
     box-sizing: border-box;
-    flex: 1 1 32px;
+    margin: @sp-sm;
     overflow: hidden;
+    flex: 1 1 32px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: @sp-sm;
-
+    cursor: pointer;
+    
+    transition-duration: @time-sm;
+    
+    &.focus {
+      flex: 10 1 64px;
+    }
+    
     img {
+      width: auto;
       height: 400px;
     }
   }
+  
   @media @xs {
     flex-flow: column nowrap;
 
     .frame {
       flex: 1 1 64px;
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
+      
+      &.focus {
+        flex: 1 1 500px;
+      }
     }
   }
+  
+  .toolbar {
+    transition-duration: @time-sm;
+    
+    bottom: -@sp-lg * 2;
+  }
+  
+  .focus .toolbar {
+    bottom: 0;
+  }
 }
+
 // ADAPTABILITY
 
-.island .title {
+.island h1.title {
   transition-duration: @time-sm;
   position: relative;
   left: -@sp-xl;
