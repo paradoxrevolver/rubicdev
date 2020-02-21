@@ -55,6 +55,7 @@
 
 /* TIMING */
 
+@time-xs: 0.1s;
 @time-sm: 0.4s;
 @time-md: 0.7s;
 
@@ -130,15 +131,14 @@ body {
 }
 
 /* GENERAL CLASSES */
-// div is the size of the page
 
+// div is the size of the page
 .cover {
   position: relative;
   top: 0;
   left: 0;
   min-height: 100%;
 }
-// div
 
 .border {
   box-shadow: 0 0 @sp-sm @glow;
@@ -151,14 +151,14 @@ body {
   border-left: 1px solid @primary;
   border-right: 1px solid @primary;
 }
-// represents one body of content
 
+// represents one body of content in the main column
 .island {
   box-sizing: border-box;
   margin: @sp-xl 0;
 
   > :not(:last-child) {
-    margin-bottom: @sp-sm;
+    margin-bottom: @sp-md;
   }
 
   h1.title {
@@ -188,6 +188,7 @@ body {
   }
 }
 
+// toolbar styling
 .toolbar {
   position: absolute;
   right: 0;
@@ -199,7 +200,7 @@ body {
     margin: 0 @sp-xs @sp-xs 0;
     font: @body-md;
     color: @primary;
-    background-color: fade(@bg-1, 50%);
+    background-color: fade(@bg-3, 50%);
     border: 1px solid @primary;
     border-radius: 2px;
     
@@ -212,6 +213,46 @@ body {
       color: @link;
       background-color: fade(@link, 20%);
       border: 1px solid @link;
+    }
+  }
+}
+
+// toolbar tool animations
+.toolbar {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+
+  a.tool {
+    transition-duration: @time-sm;
+    transition-timing-function: cubic-bezier(0.34, 0.34, 0.33, 1.49);
+    position: relative;
+    bottom: -@sp-xl * 2; 
+  }
+
+  //.childTransitionDelays(~"a.tool", @time-xs * 4, -@time-xs, 5);
+}
+
+.focus .toolbar {
+  //.childTransitionDelays(~"a.tool", 0s, @time-xs, 5);
+  a.tool { bottom: 0; }
+}
+
+// mixin that sets a stepped transition delay for a parent's children
+.childTransitionDelays(@elem, @start, @step, @max, @i: 1) when (@i <= @max) {
+  @{elem}:nth-child(@{i}) { transition-delay: @start + (@step * (@i - 1)); }
+  .childTransitionDelays(@elem, @start, @step, @max, (@i + 1));
+}
+
+.frame {
+  img {
+    width: auto;
+    height: 100%;
+  }
+
+  @media @xs {
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }
@@ -257,43 +298,45 @@ body {
     cursor: pointer;
     
     transition-duration: @time-sm;
+
+    img { height: 500px; }
     
-    &.focus {
-      flex: 10 1 64px;
-    }
-    
-    img {
-      width: auto;
-      height: 400px;
-    }
+    &.focus { flex: 10 1 64px; }
   }
   
+  // art gallery on smaller displays
   @media @xs {
     flex-flow: column nowrap;
 
     .frame {
-      flex: 1 1 64px;
+      flex: 1 1 120px;
+
+      img { width: 100%; height: auto; }
       
-      img {
-        width: 100%;
-        height: auto;
-      }
-      
-      &.focus {
-        flex: 1 1 500px;
-      }
+      &.focus { flex: 1 1 500px; }
     }
   }
-  
-  .toolbar {
-    transition-duration: @time-sm;
-    
-    bottom: -@sp-lg * 2;
-  }
-  
-  .focus .toolbar {
-    bottom: 0;
-  }
+}
+
+#code-gallery {
+  display: grid;
+  grid: ~"auto-flow 1fr / 1fr 1fr 1fr 1fr";
+  grid-gap: @sp-lg;
+
+  .frame { height: 160px; }
+}
+
+#sound-gallery {
+  display: grid;
+  grid: ~"auto / 1fr";
+}
+
+#design-gallery {
+  display: grid;
+  grid: ~"auto-flow 160px / 1fr 1fr";
+  grid-gap: @sp-lg;
+
+  @media @xs { grid: ~"auto-flow 160px / 1fr"; }
 }
 
 // ADAPTABILITY

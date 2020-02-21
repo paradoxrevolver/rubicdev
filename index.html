@@ -4,6 +4,7 @@ title: "rubic.dev"
 ---
 <div id="me" class="island">
   <h1 class="title"><a href="#me">me</a></h1>
+
   <p>my name is rubic, paradoxrevolver, or you can call me adam.</p>
   
   <p>this website is rubic.dev, home to all the projects and parts i've worked on over the years.</p>
@@ -15,6 +16,10 @@ title: "rubic.dev"
 
 <div id="art" class="island">
   <h1 class="title"><a href="#art">art</a></h1>
+
+  <p>i started drawing in 2014. while more of my focus over the years have been directed towards programming, i still occasionally return to drawing or modeling just to remember how to use a pen.</p>
+
+  <p>the main tools i use for art includes Paint Tool SAI, Paint.NET, Aseprite, Illustrator, and Blender.</p>
 
   <div id="art-gallery">
     {% assign image_list = site.static_files | where: "art", true %}
@@ -33,8 +38,19 @@ title: "rubic.dev"
 <div id="code" class="island">
   <h1 class="title"><a href="#code">code</a></h1>
 
-  <div id="code-gallery">
+  <p>this section is for coding projects where the emphasis was on the problem i was trying to solve with programming or the project otherwise wasn't dependent on other artistic disciplines.</p>
 
+  <p>over the years i've programmed in a lot of different languages using a lot of different tools. today i'm strongly familiar with Java, C#, and JavaScript and comfortable in Python and C++.</p>
+
+  <p>i've been using Visual Studio for C++ and have also used it for C#. i've also worked with several of the JetBrains development environments including PyCharm and Rider. i've used Visual Studio Code, Brackets, and Atom for web development.</p>
+
+  <div id="code-gallery">
+    {% assign image_list = site.static_files | where: "code", true %}
+    {% for image in image_list %}
+    <div class="frame border">
+      <img src="{{image.path}}">
+    </div>
+    {% endfor %}
   </div>
 </div>
 
@@ -42,18 +58,31 @@ title: "rubic.dev"
   <h1 class="title"><a href="#sound">sound</a></h1>
 
   <div id="sound-gallery">
-    
+
   </div>
 </div>
 
 <div id="design" class="island">
   <h1 class="title"><a href="#design">design</a></h1>
 
+  <p>this section is for any of my more ambitious projects that a single picture wouldn't do justice. games that i create will most certainly be here. these projects are often ones i produced with a team and are closed-source because we plan to formally release it.</p>
+
   <div id="design-gallery">
-    
+    {% assign image_list = site.static_files | where: "design", true %}
+    {% for image in image_list %}
+    <div class="frame border">
+      <img src="{{image.path}}">
+    </div>
+    {% endfor %}
   </div>
 </div>
 
 <div id="connect" class="island">
   <h1 class="title"><a href="#connect">connect</a></h1>
+
+  <p>here are other places you can find my work. i'm pretty terrible about posting consistently to social media but i'd like to get a better hang of it.</p>
+
+  <div id="connect-gallery">
+
+  </div>
 </div>

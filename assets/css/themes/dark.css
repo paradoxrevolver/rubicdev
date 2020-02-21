@@ -113,7 +113,7 @@ body {
   margin: 36px 0;
 }
 .island > :not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 .island h1.title {
   display: inline-block;
@@ -148,7 +148,7 @@ body {
   margin: 0 6px 6px 0;
   font: 11pt Rubik, sans-serif;
   color: hsl(0, 0%, 100%);
-  background-color: rgba(29, 33, 45, 0.5);
+  background-color: rgba(3, 41, 51, 0.5);
   border: 1px solid hsl(0, 0%, 100%);
   border-radius: 2px;
   display: flex;
@@ -162,6 +162,29 @@ body {
   color: hsl(169, 84%, 61%);
   background-color: hsla(169, 84%, 61%, 0.2);
   border: 1px solid hsl(169, 84%, 61%);
+}
+.toolbar {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+}
+.toolbar a.tool {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.34, 0.34, 0.33, 1.49);
+  position: relative;
+  bottom: -72px;
+}
+.focus .toolbar a.tool {
+  bottom: 0;
+}
+.frame img {
+  width: auto;
+  height: 100%;
+}
+@media only screen and (max-width: 499.98px) {
+  .frame img {
+    width: 100%;
+    height: auto;
+  }
 }
 /* SPECIFIC IDS */
 #layout {
@@ -199,19 +222,18 @@ body {
   cursor: pointer;
   transition-duration: 0.4s;
 }
+#art-gallery .frame img {
+  height: 500px;
+}
 #art-gallery .frame.focus {
   flex: 10 1 64px;
-}
-#art-gallery .frame img {
-  width: auto;
-  height: 400px;
 }
 @media only screen and (max-width: 499.98px) {
   #art-gallery {
     flex-flow: column nowrap;
   }
   #art-gallery .frame {
-    flex: 1 1 64px;
+    flex: 1 1 120px;
   }
   #art-gallery .frame img {
     width: 100%;
@@ -221,12 +243,27 @@ body {
     flex: 1 1 500px;
   }
 }
-#art-gallery .toolbar {
-  transition-duration: 0.4s;
-  bottom: -48px;
+#code-gallery {
+  display: grid;
+  grid: auto-flow 1fr / 1fr 1fr 1fr 1fr;
+  grid-gap: 24px;
 }
-#art-gallery .focus .toolbar {
-  bottom: 0;
+#code-gallery .frame {
+  height: 160px;
+}
+#sound-gallery {
+  display: grid;
+  grid: auto / 1fr;
+}
+#design-gallery {
+  display: grid;
+  grid: auto-flow 160px / 1fr 1fr;
+  grid-gap: 24px;
+}
+@media only screen and (max-width: 499.98px) {
+  #design-gallery {
+    grid: auto-flow 160px / 1fr;
+  }
 }
 .island h1.title {
   transition-duration: 0.4s;
