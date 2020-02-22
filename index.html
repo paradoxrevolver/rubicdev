@@ -70,8 +70,12 @@ title: "rubic.dev"
   <div id="design-gallery">
     {% assign image_list = site.static_files | where: "design", true %}
     {% for image in image_list %}
-    <div class="frame border">
-      <img src="{{image.path}}">
+    <div class="frame">
+      <div class="preview border"><img src="{{image.path}}"></div>
+      <div class="description">
+        <h3>header</h3>
+        <p>description</p>
+      </div>
     </div>
     {% endfor %}
   </div>

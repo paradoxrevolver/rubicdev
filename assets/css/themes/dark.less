@@ -202,7 +202,7 @@ body {
     color: @primary;
     background-color: fade(@bg-3, 50%);
     border: 1px solid @primary;
-    border-radius: 2px;
+    border-radius: 1px;
     
     display: flex;
     justify-content: center;
@@ -337,6 +337,22 @@ body {
   grid-gap: @sp-lg;
 
   @media @xs { grid: ~"auto-flow 160px / 1fr"; }
+
+  .frame {
+    display: flex;
+    flex-flow: row nowrap;
+
+    .preview {
+      flex: 0 0 160px;
+    }
+
+    .description {
+      margin-left: @sp-md;
+      flex: 1 0 0;
+
+      h3 { margin-bottom: @sp-xs; }
+    }
+  }
 }
 
 // ADAPTABILITY
