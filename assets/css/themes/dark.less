@@ -50,8 +50,8 @@
 
 /* MEDIA QUERIES */
 
-@xs: ~"only screen and (max-width: 499.98px)";
-@sm: ~"only screen and (max-width: 859.98px)"; 
+@sm: ~"only screen and (max-width: 499.98px)";
+@md: ~"only screen and (max-width: 859.98px)"; 
 
 /* TIMING */
 
@@ -243,20 +243,6 @@ body {
   .childTransitionDelays(@elem, @start, @step, @max, (@i + 1));
 }
 
-.frame {
-  img {
-    width: auto;
-    height: 100%;
-  }
-
-  @media @xs {
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-}
-
 /* SPECIFIC IDS */
 
 #layout {
@@ -284,7 +270,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   margin: -@sp-sm;
-  
+
   .frame {
     position: relative;
     box-sizing: border-box;
@@ -299,13 +285,17 @@ body {
     
     transition-duration: @time-sm;
 
-    img { height: 500px; }
+    img { 
+      width: auto;
+      height: 100%;
+      height: 500px;
+    }
     
     &.focus { flex: 10 1 64px; }
   }
   
   // art gallery on smaller displays
-  @media @xs {
+  @media @sm {
     flex-flow: column nowrap;
 
     .frame {
@@ -336,7 +326,7 @@ body {
   grid: ~"auto-flow 160px / 1fr 1fr";
   grid-gap: @sp-lg;
 
-  @media @xs { grid: ~"auto-flow 160px / 1fr"; }
+  @media @sm { grid: ~"auto-flow 160px / 1fr"; }
 
   .frame {
     display: flex;
@@ -384,7 +374,7 @@ nav.penrose {
   height: @px-penrose;
 }
 // pull navigation away on smaller devices
-@media @sm {
+@media @md {
   .island h1.title {
     left: -@sp-sm;
     padding-left: @sp-sm;

@@ -176,16 +176,6 @@ body {
 .focus .toolbar a.tool {
   bottom: 0;
 }
-.frame img {
-  width: auto;
-  height: 100%;
-}
-@media only screen and (max-width: 499.98px) {
-  .frame img {
-    width: 100%;
-    height: auto;
-  }
-}
 /* SPECIFIC IDS */
 #layout {
   /* major page elements are just a flex row */
@@ -223,6 +213,8 @@ body {
   transition-duration: 0.4s;
 }
 #art-gallery .frame img {
+  width: auto;
+  height: 100%;
   height: 500px;
 }
 #art-gallery .frame.focus {
