@@ -5,7 +5,7 @@
 
 /*	http://rubic.dev/
 	Edited by paradoxrevolver aka rubic
-	2019.08.07
+	2020.08.31
 */
 
 html, body, div, span, applet, object, iframe,
@@ -31,6 +31,9 @@ time, mark, audio, video {
 a {
 	display: inline-block;
     text-decoration: none;
+}
+img {
+	width: 100%;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
