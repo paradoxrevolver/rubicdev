@@ -1,0 +1,111 @@
+{
+    "art": {
+        "frames": [
+            {
+                "name": "ricket",
+                "desc": "A drawing I made for my friend torcado.",
+                "img": "assets/media/img/art/1ricket.png"
+            }, {
+                "name": "band",
+                "desc": "A collection of my characters in a band.",
+                "img": "assets/media/img/art/2band.png"
+            }, {
+                "name": "wonder",
+                "desc": "A slight perspective piece I did of one of my characters when I was experimenting with coloring lines.",
+                "img": "assets/media/img/art/3wonder.png"
+            }, {
+                "name": "alright",
+                "desc": "A sort of abstract piece I did of my sona character when I was experimenting with bolder color choices.",
+                "img": "assets/media/img/art/4alright.png"
+            }, {
+                "name": "gal",
+                "desc": "A character design I made on a whim.",
+                "img": "assets/media/img/art/5gal.png"
+            }
+        ]
+    },
+
+    "code": {
+        "frames": [
+            {
+                "name": "Scope",
+                "desc": "A work-in-progress productivity tool being created in Electron.",
+                "img": "",
+                "url": "https://github.com/paradoxrevolver/scope"
+            }, {
+                "name": "Beaker",
+                "desc": "A work-in-progress art program being created in Electron with React.",
+                "img": "",
+                "url": "https://github.com/paradoxrevolver/beaker"
+            }, {
+                "name": "PolyominoSolver",
+                "desc": "A tool designed to solve polyomino fitting problems with an interfacing following rules of Google's material design. The UI wasn't completed but I did finish the logic necessary to solve the NP-complete problem.",
+                "img": "assets/media/img/code/polyominoSolver/preview.png",
+                "url": "https://github.com/paradoxrevolver/polyominosolver"
+            }
+        ]
+    },
+
+    "sound": {
+        "frames": [
+
+        ]
+    },
+
+    "design": {
+        "frames": [
+            {
+                "name": "Timekeep",
+                "desc": "A Unity game I completed in one week for the Brackeys Jam 2020.2. I worked with three friends and did all of the programming. We were pretty surprised to find out we placed #29 out of 1,850 entries.",
+                "img": "",
+                "url": "https://rubic.itch.io/timekeep"
+            }, {
+                "name": "Spots and Ears",
+                "desc": "A narrative / puzzle game that was created in Unity. I was the lone programmer working with a team of artists.\n\nWe finished a demo that was revealed at SHMCon in February of 2020.",
+                "img": "",
+                "url": "https://www.inbetweensjsubfa2020.org/student-projects/spots-ears"
+            }, {
+                "name": "Pawbin",
+                "desc": "A creature collection game ",
+                "img": "assets/media/img/design/pawbin/preview.png",
+                "url": "https://pawb.in"
+            }, {
+                "name": "Dizzyship",
+                "desc": "A Unity game I completed in 48 hours for the GMTK Game Jam 2020. I worked solo and scored in the top 10% of roughly 5,400 entries.",
+                "img": "",
+                "url": "https://rubic.itch.io/dizzyship"
+            }, {
+                "name": "Yarn",
+                "desc": "A puzzle game that was created in Unity. I taught a team of programmers how to use Unity and led the project design.\n\nThe project ended lacking some significant functionality but served as a really important example of team management for me.",
+                "img": "assets/media/img/design/yarn/preview.png",
+                "url": "https://github.com/paradoxrevolver/yarn"
+            }, {
+                "name": "rubic.dev",
+                "desc": "The site you're looking at now.",
+                "img": "assets/media/img/design/rubicdev/preview.gif",
+                "url": "https://github.com/paradoxrevolver/rubicdev"
+            }
+        ]
+    },
+
+    "connect": {
+        "frames": [
+            {
+                "name": "GitHub",
+                "desc": "",
+                "img": "",
+                "url": "https://github.com/paradoxrevolver/"
+            }, {
+                "name": "itch.io",
+                "desc": "",
+                "img": "",
+                "url": "https://rubic.itch.io/"
+            }, {
+                "name": "LinkedIn",
+                "desc": "",
+                "img": "",
+                "url": "https://www.linkedin.com/in/adamtheball/"
+            }
+        ]
+    }
+}
