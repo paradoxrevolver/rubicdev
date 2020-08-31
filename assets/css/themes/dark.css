@@ -302,7 +302,7 @@ nav.penrose {
   height: 200px;
 }
 @media only screen and (max-width: 859.98px) {
-  .island .title {
+  .island h1.title {
     left: -12px;
     padding-left: 12px;
   }
