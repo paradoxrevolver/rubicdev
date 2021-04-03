@@ -195,12 +195,12 @@ body {
   min-width: 0;
   margin: 0 36px;
 }
-#art-gallery {
+.art-gallery {
   display: flex;
   flex-flow: row nowrap;
   margin: -12px;
 }
-#art-gallery .frame {
+.art-gallery .frame {
   position: relative;
   box-sizing: border-box;
   margin: 12px;
@@ -212,26 +212,26 @@ body {
   cursor: pointer;
   transition-duration: 0.4s;
 }
-#art-gallery .frame img {
+.art-gallery .frame img {
   width: auto;
   height: 100%;
   height: 500px;
 }
-#art-gallery .frame.focus {
+.art-gallery .frame.focus {
   flex: 10 1 64px;
 }
 @media only screen and (max-width: 499.98px) {
-  #art-gallery {
+  .art-gallery {
     flex-flow: column nowrap;
   }
-  #art-gallery .frame {
+  .art-gallery .frame {
     flex: 1 1 120px;
   }
-  #art-gallery .frame img {
+  .art-gallery .frame img {
     width: 100%;
     height: auto;
   }
-  #art-gallery .frame.focus {
+  .art-gallery .frame.focus {
     flex: 1 1 500px;
   }
 }

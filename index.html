@@ -9,17 +9,17 @@ title: "rubic.dev"
   
   <p>this website is rubic.dev, home to all the projects and parts i've worked on over the years.</p>
   
-  <p>i'm an artist, programmer, and game designer that enjoys creating useful tools and clever games. i'm currently a student at San Jose State University graduating in fall of 2020 with a Bachelor's degree in Software Engineering and a minor in Mathematics.</p>
-  
-  <p>my goal is to find a place in game development where i can write code, draw art, and design experiences that inspire others.</p>
+  <p>i'm an artist, programmer, and game designer. i make clever tools and games!</p>
+
+  <p>i graduated San Jose State University in 2020 with a BS in Software Engineering and a minor in Mathematics.</p>
 </div>
 
 <div id="art" class="island">
   <h1 class="title"><a href="#art">art</a></h1>
 
-  <p>i spent most of 2014 to 2017 improving my drawing. although my focus has since shifted towards programming, i still often return to drawing or modeling just to remember how to do it.</p>
+  <p>i spent a lot of 2014-2017 drawing digitally and i still occasionally come back to it.</p>
 
-  <div id="art-gallery">
+  <div class="art-gallery">
     {% assign frames = site.data.home.art.frames %}
     {% for frame in frames %}
     <div class="frame border">
@@ -30,13 +30,28 @@ title: "rubic.dev"
     </div>
     {% endfor %}
   </div>
+
+  <p>more recently, i've done some graphic design work here and there.</p>
+
+  <div class="art-gallery">
+    {% assign frames = site.data.home.graphic.frames %}
+    {% for frame in frames %}
+    <div class="frame border">
+      <img class="border-x" src="{{frame.img}}">
+      <div class="toolbar">
+        <a class="tool" href="{{frame.img}}" target="_blank"><i class="far fa-file-image"></i></a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
   <script src="/assets/js/art-gallery.js"></script>
 </div>
 
 <div id="code" class="island">
   <h1 class="title"><a href="#code">code</a></h1>
 
-  <p>although the first thing i ever programmed in Python dates all the way back to 2012, i only began taking it seriously starting in early 2016. this section is for coding projects where the emphasis was on the problem i was trying to solve with programming or the project otherwise wasn't dependent on other disciplines.</p>
+  <p>i've been programming video games since 2012. </p>
 
   <div id="code-gallery">
     {% assign frames = site.data.home.code.frames %}
