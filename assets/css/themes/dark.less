@@ -2,8 +2,8 @@
 
 // background colors for gradients
 @bg-1: #1d212d;
-@bg-2: #171f2a;
-@bg-3: #032933;
+@bg-2: #18202b;
+@bg-3: #032b35;
 @bg-4: #032f3a;
 @grad-1: linear-gradient(@bg-1, @bg-3);
 @grad-2: linear-gradient(@bg-2, @bg-4);
@@ -47,6 +47,8 @@
 @px-penrose: 200px;
 @px-penrose-mini: 72px;
 @px-penrose-margin-x: ((@px-nav-width - @px-penrose)/2);
+@px-preview-width: 200px;
+@px-preview-width-mini: 100px;
 
 /* MEDIA QUERIES */
 
@@ -106,6 +108,16 @@ pre code {
   background-color: initial;
   padding: 0;
 }
+
+blockquote {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left: @sp-md solid white;
+  border-image: linear-gradient(to right, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 0%)) 1;
+  padding: @sp-sm;
+  font-style: italic;
+}
+
 /* SCROLLBAR CHANGES */
 
 // chrome scrollbars
@@ -143,12 +155,17 @@ body {
 .border {
   box-shadow: 0 0 @sp-sm @glow;
   border: 1px solid @primary;
-  border-radius: 1px;
+  border-radius: 2px;
 }
 
 .border-x {
   box-shadow: 0 0 @sp-sm @glow;
   border-left: 1px solid @primary;
+  border-right: 1px solid @primary;
+}
+
+.border-r {
+  box-shadow: 0 0 @sp-sm @glow;
   border-right: 1px solid @primary;
 }
 
@@ -197,7 +214,7 @@ body {
   a.tool {
     width: @sp-xl;
     height: @sp-xl;
-    margin: 0 @sp-xs @sp-xs 0;
+    margin: 0 @sp-sm @sp-sm 0;
     font: @body-md;
     color: @primary;
     background-color: fade(@bg-3, 50%);
@@ -303,45 +320,97 @@ body {
 
       img { width: 100%; height: auto; }
       
-      &.focus { flex: 1 1 500px; }
+      &.focus { flex: 1 1 420px; }
     }
   }
 }
 
-#code-gallery {
-  display: grid;
-  grid: ~"auto-flow 1fr / 1fr 1fr 1fr 1fr";
-  grid-gap: @sp-lg;
-
-  .frame { height: 160px; }
-}
-
-#sound-gallery {
+.sound-gallery {
   display: grid;
   grid: ~"auto / 1fr";
 }
 
-#design-gallery {
-  display: grid;
-  grid: ~"auto-flow 160px / 1fr 1fr";
-  grid-gap: @sp-lg;
+.row-gallery {
+  display: flex;
+  flex-flow: column nowrap;
 
-  @media @sm { grid: ~"auto-flow 160px / 1fr"; }
+  .frame:not(:first-child) {
+    margin-top: @sp-lg;
+  }
 
   .frame {
-    display: flex;
-    flex-flow: row nowrap;
+
+    a {
+      display: block;
+    }
 
     .preview {
-      flex: 0 0 160px;
+      display: flex;
+      flex-flow: row nowrap;
+
+      @media @sm {
+          flex-flow: column nowrap;
+
+          .border-r {
+            border-right: none;
+            border-bottom: 1px solid @primary;
+          }
+
+          div img {
+            width: 100%;
+            height: @px-preview-width;
+          }
+      }
+  
+      img {
+        width: @px-preview-width;
+        vertical-align: bottom;
+
+        // if the preview gets taller, the image will cover
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     .description {
-      margin-left: @sp-md;
-      flex: 1 0 0;
+      padding: @sp-md;
+      color: @primary;
 
-      h3 { margin-bottom: @sp-xs; }
+      h3 {
+        margin-bottom: @sp-md;
+      }
+
+      p {
+        color: fade(@primary, 70%);
+        transition-duration: @time-sm;
+      }
     }
+
+    a:hover .description p {
+      color: @primary;
+    }
+  }
+
+  // the hover over lighting effect
+  .frame {
+    position: relative;
+  }
+
+  .frame:hover::after {
+    opacity: 100%;
+  }
+
+  .frame::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 247, 255, 0.07) 100%);
+    transition-duration: @time-sm;
+    border-radius: 2px;
+    pointer-events: none;
   }
 }
 

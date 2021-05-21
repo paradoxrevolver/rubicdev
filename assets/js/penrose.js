@@ -137,10 +137,10 @@ var penrose = function(canvas) {
         bgColorHover: "#3c60bd",
         url: "design",
       }, {
-        text: "CONNECT",
+        text: "GAMEDEV",
         textColorHover: "#ff96ff",
         bgColorHover: "#6942c6",
-        url: "connect",
+        url: "gamedev",
       },
     ];
 

@@ -6,18 +6,21 @@ title: "rubic.dev"
   <h1 class="title"><a href="#me">me</a></h1>
 
   <p>my name is rubic, paradoxrevolver, or you can call me adam.</p>
-  
+
   <p>this website is rubic.dev, home to all the projects and parts i've worked on over the years.</p>
-  
+
   <p>i'm an artist, programmer, and game designer. i make clever tools and games!</p>
 
-  <p>i graduated San Jose State University in 2020 with a BS in Software Engineering and a minor in Mathematics.</p>
+  <p>at the end of 2020, i graduated <em>summa cum laude</em> from San Jose State University with a BS in Software
+    Engineering and a minor in Mathematics.</p>
 </div>
 
 <div id="art" class="island">
   <h1 class="title"><a href="#art">art</a></h1>
 
-  <p>i spent a lot of 2014-2017 drawing digitally and i still occasionally come back to it.</p>
+  <p>i've been drawing since 2014, and digital art has stayed a casual hobby of mine.</p>
+
+  <p>just about all of my work is done in Paint Tool SAI.</p>
 
   <div class="art-gallery">
     {% assign frames = site.data.home.art.frames %}
@@ -30,11 +33,60 @@ title: "rubic.dev"
     </div>
     {% endfor %}
   </div>
+</div>
 
-  <p>more recently, i've done some graphic design work here and there.</p>
+<div id="code" class="island">
+  <h1 class="title"><a href="#code">code</a></h1>
+
+  <p>i started my first programming project in 2012, a small platformer video game in SDL.</p>
+
+  <p>since then, i've picked up Java, C#, Python, JavaScript, C++, and several other programming languages. i'm always
+    interested in picking up something new.</p>
+
+  <div class="row-gallery">
+    {% assign frames = site.data.home.code.frames %}
+    {% for frame in frames %}
+    <div class="frame">
+      <a href="{{frame.url}}" target="_blank">
+        <div class="preview border">
+          <div class="border-r">
+            <img src="{{frame.img}}">
+          </div>
+          <div class="description">
+            <h3>{{frame.name}}</h3>
+            <p>{{frame.desc}}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div id="sound" class="island">
+  <h1 class="title"><a href="#sound">sound</a></h1>
+
+  <p>i started making short chiptune tracks in tracker music software in 2013.</p>
+
+  <p>i've poked into FL Studio see how a modern DAW feels, but recently i've been falling back on trackers like Renoise.
+  </p>
+
+  <blockquote>the sound player here is a work in progress!</blockquote>
+
+  <div class="sound-gallery">
+
+  </div>
+</div>
+
+<div id="design" class="island">
+  <h1 class="title"><a href="#design">design</a></h1>
+
+  <p>i've done graphic design work for small side projects and to help out teams.</p>
+
+  <p>Figma has been my go-to for vector work.</p>
 
   <div class="art-gallery">
-    {% assign frames = site.data.home.graphic.frames %}
+    {% assign frames = site.data.home.design.frames %}
     {% for frame in frames %}
     <div class="frame border">
       <img class="border-x" src="{{frame.img}}">
@@ -44,72 +96,30 @@ title: "rubic.dev"
     </div>
     {% endfor %}
   </div>
-
-  <script src="/assets/js/art-gallery.js"></script>
 </div>
 
-<div id="code" class="island">
-  <h1 class="title"><a href="#code">code</a></h1>
+<div id="gamedev" class="island">
+  <h1 class="title"><a href="#gamedev">gamedev</a></h1>
 
-  <p>i've been programming video games since 2012. </p>
+  <p>my interest in pursing a bunch of different disciplines is just about entirely motivated by video game development.</p>
 
-  <div id="code-gallery">
-    {% assign frames = site.data.home.code.frames %}
-    {% for frame in frames %}
-    <div class="frame border">
-      <a href="{{frame.url}}"><img src="{{frame.img}}"></a>
-    </div>
-    {% endfor %}
-  </div>
-</div>
+  <p>most of my projects are made in Unity.</p>
 
-<div id="sound" class="island">
-  <h1 class="title"><a href="#sound">sound</a></h1>
-
-  <p>music has had a huge influence on me for as long as i can remember, but an interest in programming and art have greatly reduced the amount of time i have ever had to focus on it. i used to make short chiptune tracks in tracker software in 2013.</p>
-
-  <div id="sound-gallery">
-
-  </div>
-</div>
-
-<div id="design" class="island">
-  <h1 class="title"><a href="#design">design</a></h1>
-
-  <p>this section is for any of my more ambitious projects that a single picture wouldn't do justice. games that i create will most certainly be here. these projects are often ones i produced with a team and are closed-source because we plan to formally release it.</p>
-
-  <div id="design-gallery">
-    {% assign frames = site.data.home.design.frames %}
+  <div class="row-gallery">
+    {% assign frames = site.data.home.gamedev.frames %}
     {% for frame in frames %}
     <div class="frame">
-      <div class="preview border">
-        <a href="{{frame.url}}"><img src="{{frame.img}}"></a>
-      </div>
-      <div class="description">
-        <h3>{{frame.name}}</h3>
-        <p>{{frame.desc}}</p>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
-
-<div id="connect" class="island">
-  <h1 class="title"><a href="#connect">connect</a></h1>
-
-  <p>here are other places you can find my work. i'm pretty terrible about posting consistently to social media but i'd like to get a better hang of it.</p>
-
-  <div id="connect-gallery">
-    {% assign frames = site.data.home.connect.frames %}
-    {% for frame in frames %}
-    <div class="frame">
-      <div class="preview border">
-        <a href="{{frame.url}}"><img src="{{frame.img}}"></a>
-      </div>
-      <div class="description">
-        <h3>{{frame.name}}</h3>
-        <p>{{frame.desc}}</p>
-      </div>
+      <a href="{{frame.url}}" target="_blank">
+        <div class="preview border">
+          <div class="border-r">
+            <img src="{{frame.img}}">
+          </div>
+          <div class="description">
+            <h3>{{frame.name}}</h3>
+            <p>{{frame.desc}}</p>
+          </div>
+        </div>
+      </a>
     </div>
     {% endfor %}
   </div>

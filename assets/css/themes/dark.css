@@ -35,7 +35,7 @@ h6 {
 body {
   font: 11pt Rubik, sans-serif;
   color: hsl(0, 0%, 100%);
-  background: linear-gradient(#1d212d, #032933);
+  background: linear-gradient(#1d212d, #032b35);
   background-attachment: fixed;
 }
 a {
@@ -62,7 +62,7 @@ code {
 pre {
   box-shadow: 0 0 12px hsla(0, 0%, 100%, 0.1);
   border: 1px solid hsl(0, 0%, 100%);
-  border-radius: 1px;
+  border-radius: 2px;
   padding: 12px;
   white-space: pre-wrap;
   background-color: hsla(177, 100%, 44%, 0.15);
@@ -74,13 +74,21 @@ pre code {
   background-color: initial;
   padding: 0;
 }
+blockquote {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left: 18px solid white;
+  border-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0)) 1;
+  padding: 12px;
+  font-style: italic;
+}
 /* SCROLLBAR CHANGES */
 ::selection {
   background-color: hsla(177, 100%, 44%, 0.54);
   color: hsl(0, 0%, 100%);
 }
 ::-webkit-scrollbar {
-  background: linear-gradient(#1d212d, #032933);
+  background: linear-gradient(#1d212d, #032b35);
   height: 12px;
   width: 12px;
 }
@@ -101,11 +109,15 @@ body {
 .border {
   box-shadow: 0 0 12px hsla(0, 0%, 100%, 0.1);
   border: 1px solid hsl(0, 0%, 100%);
-  border-radius: 1px;
+  border-radius: 2px;
 }
 .border-x {
   box-shadow: 0 0 12px hsla(0, 0%, 100%, 0.1);
   border-left: 1px solid hsl(0, 0%, 100%);
+  border-right: 1px solid hsl(0, 0%, 100%);
+}
+.border-r {
+  box-shadow: 0 0 12px hsla(0, 0%, 100%, 0.1);
   border-right: 1px solid hsl(0, 0%, 100%);
 }
 .island {
@@ -118,7 +130,7 @@ body {
 .island h1.title {
   display: inline-block;
   background: hsl(0, 0%, 100%);
-  color: #032933;
+  color: #032b35;
   padding: 6px 12px;
   margin-bottom: 24px;
   /* change text */
@@ -129,7 +141,7 @@ body {
 .island h1.title a {
   margin: -6px -12px;
   padding: 6px 12px;
-  color: #032933;
+  color: #032b35;
 }
 .island h1.title a:hover {
   color: hsl(180, 92%, 31%);
@@ -145,10 +157,10 @@ body {
 .toolbar a.tool {
   width: 36px;
   height: 36px;
-  margin: 0 6px 6px 0;
+  margin: 0 12px 12px 0;
   font: 11pt Rubik, sans-serif;
   color: hsl(0, 0%, 100%);
-  background-color: rgba(3, 41, 51, 0.5);
+  background-color: rgba(3, 43, 53, 0.5);
   border: 1px solid hsl(0, 0%, 100%);
   border-radius: 1px;
   display: flex;
@@ -185,7 +197,7 @@ body {
 }
 #navigation {
   box-sizing: border-box;
-  background: linear-gradient(#171f2a, #032f3a);
+  background: linear-gradient(#18202b, #032f3a);
   background-attachment: fixed;
   display: flex;
   justify-content: center;
@@ -232,44 +244,77 @@ body {
     height: auto;
   }
   .art-gallery .frame.focus {
-    flex: 1 1 500px;
+    flex: 1 1 420px;
   }
 }
-#code-gallery {
-  display: grid;
-  grid: auto-flow 1fr / 1fr 1fr 1fr 1fr;
-  grid-gap: 24px;
-}
-#code-gallery .frame {
-  height: 160px;
-}
-#sound-gallery {
+.sound-gallery {
   display: grid;
   grid: auto / 1fr;
 }
-#design-gallery {
-  display: grid;
-  grid: auto-flow 160px / 1fr 1fr;
-  grid-gap: 24px;
+.row-gallery {
+  display: flex;
+  flex-flow: column nowrap;
 }
-@media only screen and (max-width: 499.98px) {
-  #design-gallery {
-    grid: auto-flow 160px / 1fr;
-  }
+.row-gallery .frame:not(:first-child) {
+  margin-top: 24px;
 }
-#design-gallery .frame {
+.row-gallery .frame a {
+  display: block;
+}
+.row-gallery .frame .preview {
   display: flex;
   flex-flow: row nowrap;
 }
-#design-gallery .frame .preview {
-  flex: 0 0 160px;
+@media only screen and (max-width: 499.98px) {
+  .row-gallery .frame .preview {
+    flex-flow: column nowrap;
+  }
+  .row-gallery .frame .preview .border-r {
+    border-right: none;
+    border-bottom: 1px solid hsl(0, 0%, 100%);
+  }
+  .row-gallery .frame .preview div img {
+    width: 100%;
+    height: 200px;
+  }
 }
-#design-gallery .frame .description {
-  margin-left: 18px;
-  flex: 1 0 0;
+.row-gallery .frame .preview img {
+  width: 200px;
+  vertical-align: bottom;
+  height: 100%;
+  object-fit: cover;
 }
-#design-gallery .frame .description h3 {
-  margin-bottom: 6px;
+.row-gallery .frame .description {
+  padding: 18px;
+  color: hsl(0, 0%, 100%);
+}
+.row-gallery .frame .description h3 {
+  margin-bottom: 18px;
+}
+.row-gallery .frame .description p {
+  color: hsla(0, 0%, 100%, 0.7);
+  transition-duration: 0.4s;
+}
+.row-gallery .frame a:hover .description p {
+  color: hsl(0, 0%, 100%);
+}
+.row-gallery .frame {
+  position: relative;
+}
+.row-gallery .frame:hover::after {
+  opacity: 100%;
+}
+.row-gallery .frame::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0%;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 247, 255, 0.07) 100%);
+  transition-duration: 0.4s;
+  border-radius: 2px;
+  pointer-events: none;
 }
 .island h1.title {
   transition-duration: 0.4s;
