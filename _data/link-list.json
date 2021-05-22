@@ -11,5 +11,9 @@
       "title": "<i class=\"fab fa-github\"></i> GitHub",
       "link": "https://github.com/paradoxrevolver/",
       "rank": "normal"
+    }, {
+      "title": "<i class=\"fab fa-itch-io\"></i> itch.io",
+      "link": "https://rubic.itch.io/",
+      "rank": "normal"
     }
 ]
