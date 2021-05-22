@@ -113,7 +113,7 @@ blockquote {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   border-left: @sp-md solid white;
-  border-image: linear-gradient(to right, rgba(255, 255, 255, 100%), rgba(255, 255, 255, 0%)) 1;
+  border-image: linear-gradient(to right, rgba(255, 255, 255, 100%), transparent) 1;
   padding: @sp-sm;
   font-style: italic;
 }
@@ -269,12 +269,115 @@ body {
   justify-content: center;
 }
 
-#navigation {
+#navigation-column {
   box-sizing: border-box;
   background: @grad-2;
   background-attachment: fixed;
   display: flex;
-  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+nav .link-list {
+  margin-top: 48px;
+
+  ul {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  li {
+    display: flex;
+    margin-left: 0;
+    list-style-type: none;
+  }
+
+  li:not(:first-child) {
+    margin-top: @sp-md;
+  }
+
+  a {
+    color: @primary;
+    border-top: 1px solid @primary;
+    border-bottom: 1px solid @primary;
+    border-image: linear-gradient(to right, transparent, @primary 25%, @primary 75%, transparent) 1;
+    padding: 10px @sp-xl;
+    width: 100%;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10pt;
+    letter-spacing: 1pt;
+  }
+
+  li.important a {
+    border: none;
+    border-image: none;
+    border-radius: 2px;
+    background: @primary;
+    color: @bg-1;
+    transition-duration: @time-sm;
+  }
+
+  i {
+    margin-right: @sp-xs;
+    font-size: 12pt;
+    font-weight: normal;
+    vertical-align: bottom;
+  }
+
+  // the hover over lighting effect
+  li a {
+    transition-duration: @time-sm;
+    position: relative;
+  }
+
+  li.normal a:hover {
+    color: fade(@primary, 80%);
+  }
+
+  li.important a:hover {
+    color: fade(@bg-1, 90%);
+  }
+
+  li.normal a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    background: radial-gradient(ellipse at bottom, rgba(0, 247, 255, 0.12), transparent 70%);
+    transition-duration: @time-sm;
+    pointer-events: none;
+  }
+
+  li.normal a:hover::after {
+    opacity: 100%;
+  }
+
+  li.important a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    background: linear-gradient(to bottom, fade(@bg-3, 5%), fade(@bg-3, 15%));
+    transition-duration: @time-sm;
+    pointer-events: none;
+  }
+
+  li.important a:hover::after {
+    opacity: 100%;
+  }
 }
 
 #content {
@@ -423,7 +526,7 @@ body {
   padding-left: @sp-xl;
 }
 
-#navigation {
+#navigation-column {
   transition-duration: @time-md;
   position: relative;
   flex: 0 0 @px-nav-width;
@@ -432,10 +535,13 @@ body {
   margin-left: @sp-xl;
 }
 
-nav.penrose {
-  transition-duration: @time-md;
+nav {
   position: sticky;
   top: @sp-xl;
+}
+
+.penrose {
+  transition-duration: @time-md;
   // left doesn't do anything with sticky
   // it's just here for when a media query sets the position to fixed
   left: @sp-xl + @px-penrose-margin-x;
@@ -449,21 +555,21 @@ nav.penrose {
     padding-left: @sp-sm;
   }
 
-  #navigation {
+  #navigation-column {
     flex: 0 0 0;
     left: -(@px-penrose/2);
     width: 0;
     margin-left: 0;
   }
 
-  nav.penrose {
+  .penrose {
     position: fixed;
     left: @sp-lg;
     width: @px-penrose-mini;
     height: @px-penrose-mini;
   }
 
-  nav.penrose {
+  .penrose {
     // while penrose v2.0 isn't done, just shove it off screen
     left: -(@px-penrose + @sp-xl);
     width: @px-penrose;

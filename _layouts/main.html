@@ -28,8 +28,21 @@
 
 <body>
   <div id="layout" class="cover">
-    <div id="navigation" class="border-x">
-      {% include penrose-nav.html %}
+    <div id="navigation-column" class="border-x">
+      <nav>
+        {% include penrose-nav.html %}
+        <div class="link-list">
+          <ul>
+            {% for item in site.data.link-list %}
+              {% if item.rank == "important" %}
+              <li class="important"><a href="{{item.link}}" target="_blank">{{item.title}}</a></li>
+              {% else %}
+              <li class="normal"><a href="{{item.link}}" target="_blank">{{item.title}}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </nav>
     </div>
     <div id="content">
       {{ content }}

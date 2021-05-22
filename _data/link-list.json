@@ -1,0 +1,15 @@
+[
+    {
+      "title": "<i class=\"fas fa-file-alt\"></i> Resume",
+      "link": "/assets/media/pdf/resume.pdf",
+      "rank": "important"
+    }, {
+      "title": "<i class=\"fab fa-linkedin\"></i> Linkedin",
+      "link": "https://www.linkedin.com/in/adamtheball/",
+      "rank": "normal"
+    }, {
+      "title": "<i class=\"fab fa-github\"></i> GitHub",
+      "link": "https://github.com/paradoxrevolver/",
+      "rank": "normal"
+    }
+]
