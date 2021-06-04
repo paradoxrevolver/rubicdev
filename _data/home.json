@@ -7,15 +7,15 @@
                 "img": "assets/media/img/art/ricket.png"
             }, {
                 "name": "band",
-                "desc": "A collection of my characters in a band.",
+                "desc": "A collection of my characters in a school band.",
                 "img": "assets/media/img/art/band.png"
             }, {
                 "name": "wonder",
-                "desc": "A slight perspective piece I did of one of my characters when I was experimenting with coloring lines.",
+                "desc": "A perspective piece I did of one of my characters when I was experimenting with coloring lines.",
                 "img": "assets/media/img/art/wonder.png"
             }, {
                 "name": "alright",
-                "desc": "A sort of abstract piece I did of my sona character when I was experimenting with bolder color choices.",
+                "desc": "An abstract piece I did of my sona character when I was experimenting with bolder color choices.",
                 "img": "assets/media/img/art/alright.png"
             }, {
                 "name": "purple gal",
@@ -34,12 +34,12 @@
                 "url": "https://github.com/paradoxrevolver/rubicdev"
             }, {
                 "name": "Beaker",
-                "desc": "A work-in-progress art program being created in Electron with React.",
+                "desc": "A work-in-progress art program made in Electron with React.",
                 "img": "assets/media/img/code/beaker.png",
                 "url": "https://github.com/paradoxrevolver/beaker"
             }, {
                 "name": "PolyominoSolver",
-                "desc": "A tool designed to solve polyomino fitting problems with an interfacing following rules of Google's material design. The UI wasn't completed but I did finish the logic used to solve poly-fitting problems.",
+                "desc": "A tool designed to solve polyomino fitting problems with an interface according to Google's material design. The UI wasn't finished, but the solver will work in your browser's console.",
                 "img": "assets/media/img/code/polyominoSolver.png",
                 "url": "https://github.com/paradoxrevolver/polyominosolver"
             }
@@ -56,15 +56,15 @@
         "frames": [
             {
                 "name": "Hex Stickers",
-                "desc": "A set of hexagonal brand stickers I made for my own personal use.",
+                "desc": "A set of hexagonal stickers I made of various brands for my own personal use.",
                 "img": "assets/media/img/design/hexStickers.png"
             }, {
                 "name": "Starlight",
-                "desc": "A trading card design intended for a work in progress online card trading game called Starlight.",
+                "desc": "A trading card design intended to be used in an online card trading game called Starlight.",
                 "img": "assets/media/img/design/starlight.png"
             }, {
                 "name": "Beaker",
-                "desc": "The various phases of design work for the Beaker UI.",
+                "desc": "Various phases of design work for the UI of Beaker.",
                 "img": "assets/media/img/design/beaker.png"
             }
         ]
@@ -95,7 +95,7 @@
                 "url": "https://rubic.itch.io/dizzyship"
             }, {
                 "name": "Yarn",
-                "desc": "A puzzle game that was created in Unity. I led the project design and taught a team of programmers how to use several development tools.\n\nThe project ended lacking some significant functionality but it taught me a lot about team management.",
+                "desc": "A puzzle game that was created in Unity. I led the project design and taught a team of programmers how to use several development tools.\n\nThe final result is lacking significant functionality but overall the experience taught me a lot about team management.",
                 "img": "assets/media/img/gamedev/yarn.png",
                 "url": "https://github.com/paradoxrevolver/yarn"
             }

@@ -60,6 +60,7 @@
 @time-xs: 0.1s;
 @time-sm: 0.4s;
 @time-md: 0.7s;
+@time-lg: 1.0s;
 
 /* STYLING DEFAULTS */
 
@@ -293,7 +294,7 @@ nav .link-list {
   }
 
   li:not(:first-child) {
-    margin-top: @sp-md;
+    margin-top: ((@sp-md + @sp-sm)/2);
   }
 
   a {
@@ -527,14 +528,14 @@ nav .link-list {
 // ADAPTABILITY
 
 .island h1.title {
-  transition-duration: @time-sm;
+  transition-duration: @time-md;
   position: relative;
   left: -@sp-xl;
   padding-left: @sp-xl;
 }
 
 #navigation-column {
-  transition-duration: @time-md;
+  transition-duration: @time-lg;
   position: relative;
   flex: 0 0 @px-nav-width;
   left: 0;
@@ -543,12 +544,13 @@ nav .link-list {
 }
 
 nav {
+  transition-duration: @time-lg;
   position: sticky;
   top: @sp-xl;
 }
 
 .penrose {
-  transition-duration: @time-md;
+  transition-duration: @time-lg;
   // left doesn't do anything with sticky
   // it's just here for when a media query sets the position to fixed
   left: @sp-xl + @px-penrose-margin-x;
@@ -564,22 +566,12 @@ nav {
 
   #navigation-column {
     flex: 0 0 0;
-    left: -(@px-penrose/2);
+    left: -(@px-penrose);
     width: 0;
     margin-left: 0;
   }
 
-  .penrose {
-    position: fixed;
-    left: @sp-lg;
-    width: @px-penrose-mini;
-    height: @px-penrose-mini;
-  }
-
-  .penrose {
-    // while penrose v2.0 isn't done, just shove it off screen
-    left: -(@px-penrose + @sp-xl);
-    width: @px-penrose;
-    height: @px-penrose;
+  nav {
+    margin-right: (@px-penrose*1.5);
   }
 }

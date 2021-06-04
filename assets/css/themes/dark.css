@@ -216,7 +216,7 @@ nav .link-list li {
   list-style-type: none;
 }
 nav .link-list li:not(:first-child) {
-  margin-top: 18px;
+  margin-top: 15px;
 }
 nav .link-list a {
   color: hsl(0, 0%, 100%);
@@ -410,13 +410,13 @@ nav .link-list li.important a:hover::after {
   pointer-events: none;
 }
 .island h1.title {
-  transition-duration: 0.4s;
+  transition-duration: 0.7s;
   position: relative;
   left: -36px;
   padding-left: 36px;
 }
 #navigation-column {
-  transition-duration: 0.7s;
+  transition-duration: 1s;
   position: relative;
   flex: 0 0 240px;
   left: 0;
@@ -424,11 +424,12 @@ nav .link-list li.important a:hover::after {
   margin-left: 36px;
 }
 nav {
+  transition-duration: 1s;
   position: sticky;
   top: 36px;
 }
 .penrose {
-  transition-duration: 0.7s;
+  transition-duration: 1s;
   left: 56px;
   width: 200px;
   height: 200px;
@@ -440,19 +441,11 @@ nav {
   }
   #navigation-column {
     flex: 0 0 0;
-    left: -100px;
+    left: -200px;
     width: 0;
     margin-left: 0;
   }
-  .penrose {
-    position: fixed;
-    left: 24px;
-    width: 72px;
-    height: 72px;
-  }
-  .penrose {
-    left: -236px;
-    width: 200px;
-    height: 200px;
+  nav {
+    margin-right: 300px;
   }
 }
