@@ -34,12 +34,12 @@
                 "url": "https://github.com/paradoxrevolver/rubicdev"
             }, {
                 "name": "Beaker",
-                "desc": "A work-in-progress art program made in Electron with React.",
+                "desc": "A work-in-progress art program made using Electron and React.",
                 "img": "assets/media/img/code/beaker.png",
                 "url": "https://github.com/paradoxrevolver/beaker"
             }, {
                 "name": "PolyominoSolver",
-                "desc": "A tool designed to solve polyomino fitting problems with an interface according to Google's material design. The UI wasn't finished, but the solver will work in your browser's console.",
+                "desc": "A tool designed to solve polyomino fitting problems with an interface according to Google's material design. The UI wasn't finished, but the solver works in your browser's console.",
                 "img": "assets/media/img/code/polyominoSolver.png",
                 "url": "https://github.com/paradoxrevolver/polyominosolver"
             }
@@ -95,7 +95,7 @@
                 "url": "https://rubic.itch.io/dizzyship"
             }, {
                 "name": "Yarn",
-                "desc": "A puzzle game that was created in Unity. I led the project design and taught a team of programmers how to use several development tools.\n\nThe final result is lacking significant functionality but overall the experience taught me a lot about team management.",
+                "desc": "A puzzle game that was created in Unity. I led the project design and taught a team of programmers how to use several development tools.\n\nThe final result is lacking functionality, but overall, the experience taught us a lot about team management and coordination.",
                 "img": "assets/media/img/gamedev/yarn.png",
                 "url": "https://github.com/paradoxrevolver/yarn"
             }

@@ -1,7 +1,9 @@
 # rubic.dev
 my personal website for storing my game development and weird web projects.
 
-this website started out as a website called revolv.fr on september 21st, 2017. it was a simple hobby project with the eventual goal of becoming a sort of portfolio site. the domain was briefly changed to rubic.cc before google announced their .dev domains, and now it's rubic.dev.
+this website started out as a website called revolv.fr on September 21st, 2017. it was a simple hobby project with the eventual goal of becoming a portfolio site. the domain was briefly changed to rubic.cc before google announced their .dev domains, and now it's rubic.dev.
+
+on June 4th, 2021, the website's first public version was effectively complete. although many of the media galleries didn't have the full functionality i designed for them, they were presentable, and rubic.dev officially became my current portfolio site.
 
 ## Website Breakdown
 for my own future self to reference and for those curious, this is a breakdown of a bunch of parts of my website.
