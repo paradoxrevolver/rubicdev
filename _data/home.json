@@ -29,7 +29,7 @@
         "frames": [
             {
                 "name": "rubic.dev",
-                "desc": "The site you're looking at now.",
+                "desc": "The site you're looking at now. Made using Jekyll, but otherwise programmed from scratch.",
                 "img": "assets/media/img/code/rubicdev.gif",
                 "url": "https://github.com/paradoxrevolver/rubicdev"
             }, {
@@ -74,12 +74,17 @@
         "frames": [
             {
                 "name": "Timekeep",
-                "desc": "A Unity game completed in one week for the Brackeys Jam 2020.2. I worked with three friends and handled all of the programming. We placed #29 out of 1,850 entries.",
+                "desc": "A Unity game completed in one week for Brackeys Jam 2020.2. I worked with three others, handling programming and project management. We placed #29 out of 1,850 entries.",
                 "img": "assets/media/img/gamedev/timekeep.png",
                 "url": "https://rubic.itch.io/timekeep"
             }, {
+                "name": "Ghost King's Cross",
+                "desc": "A Unity game completed for Brackeys Jam 2021.2. I worked with four artists and a musician, again being responsible for programming and directing the project. We placed #46 out of 1,750 entries.",
+                "img": "assets/media/img/gamedev/gkc.png",
+                "url": "https://rubic.itch.io/ghost-kings-cross"
+            }, {
                 "name": "Spots and Ears",
-                "desc": "A narrative-focused platformer game that was created in Unity. I was the lone programmer working with a team of artists.\n\nWe finished a demo that was revealed at SHMCon in February of 2020.",
+                "desc": "A narrative-focused platformer game demo that was created in Unity. I was the lone programmer working with a team of six artists.\n\nThe project was revealed at San Jose State University's SHMCon in February of 2020.",
                 "img": "assets/media/img/gamedev/spotsAndEars.png",
                 "url": "https://spotsandears.portfoliobox.net",
                 "old_url": "https://www.inbetweensjsubfa2020.org/student-projects/spots-ears"
@@ -93,11 +98,6 @@
                 "desc": "A Unity game I completed in 48 hours for the GMTK Game Jam 2020. I worked solo and placed in the top 10% of 5,400 entries.",
                 "img": "assets/media/img/gamedev/dizzyship.png",
                 "url": "https://rubic.itch.io/dizzyship"
-            }, {
-                "name": "Yarn",
-                "desc": "A puzzle game that was created in Unity. I led the project design and taught a team of programmers how to use several development tools.\n\nThe final result is lacking functionality, but overall, the experience taught us a lot about team management and coordination.",
-                "img": "assets/media/img/gamedev/yarn.png",
-                "url": "https://github.com/paradoxrevolver/yarn"
             }
         ]
     }

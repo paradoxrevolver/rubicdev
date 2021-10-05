@@ -60,7 +60,7 @@ code {
   border-radius: 3px;
 }
 pre {
-  box-shadow: 0 0 12px hsla(0, 0%, 100%, 0.1);
+  box-shadow: 0 0 12px hsla(189, 100%, 51%, 0.15);
   border: 1px solid hsl(0, 0%, 100%);
   border-radius: 2px;
   padding: 12px;
@@ -107,22 +107,22 @@ body {
   min-height: 100%;
 }
 .border {
-  box-shadow: 0 0 12px hsla(0, 0%, 100%, 0.1);
+  box-shadow: 0 0 12px hsla(189, 100%, 51%, 0.15);
   border: 1px solid hsl(0, 0%, 100%);
   border-radius: 2px;
 }
 .border-x {
-  box-shadow: 0 0 12px hsla(0, 0%, 100%, 0.1);
+  box-shadow: 0 0 12px hsla(189, 100%, 51%, 0.15);
   border-left: 1px solid hsl(0, 0%, 100%);
   border-right: 1px solid hsl(0, 0%, 100%);
 }
 .border-r {
-  box-shadow: 0 0 12px hsla(0, 0%, 100%, 0.1);
+  box-shadow: 0 0 12px hsla(189, 100%, 51%, 0.15);
   border-right: 1px solid hsl(0, 0%, 100%);
 }
 .island {
   box-sizing: border-box;
-  margin: 36px 0;
+  margin: 48px 0;
 }
 .island > :not(:last-child) {
   margin-bottom: 18px;
