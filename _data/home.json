@@ -1,49 +1,45 @@
 {
     "art": {
-        "frames": [
-            {
-                "name": "ricket",
-                "desc": "A drawing I made for my friend torcado.",
-                "img": "assets/media/img/art/ricket.png"
-            }, {
-                "name": "band",
-                "desc": "A collection of my characters in a school band.",
-                "img": "assets/media/img/art/band.png"
-            }, {
-                "name": "wonder",
-                "desc": "A perspective piece I did of one of my characters when I was experimenting with coloring lines.",
-                "img": "assets/media/img/art/wonder.png"
-            }, {
-                "name": "alright",
-                "desc": "An abstract piece I did of my sona character when I was experimenting with bolder color choices.",
-                "img": "assets/media/img/art/alright.png"
-            }, {
-                "name": "purple gal",
-                "desc": "A character design I made on a whim.",
-                "img": "assets/media/img/art/gal.png"
-            }
-        ]
+        "frames": [{
+            "name": "ricket",
+            "desc": "A drawing I made for my friend torcado.",
+            "img": "assets/media/img/art/ricket.png"
+        }, {
+            "name": "band",
+            "desc": "A collection of my characters in a school band.",
+            "img": "assets/media/img/art/band.png"
+        }, {
+            "name": "wonder",
+            "desc": "A perspective piece I did of one of my characters when I was experimenting with coloring lines.",
+            "img": "assets/media/img/art/wonder.png"
+        }, {
+            "name": "alright",
+            "desc": "An abstract piece I did of my sona character when I was experimenting with bolder color choices.",
+            "img": "assets/media/img/art/alright.png"
+        }, {
+            "name": "purple gal",
+            "desc": "A character design I made on a whim.",
+            "img": "assets/media/img/art/gal.png"
+        }]
     },
 
     "code": {
-        "frames": [
-            {
-                "name": "rubic.dev",
-                "desc": "The site you're looking at now. Made using Jekyll, but otherwise programmed from scratch.",
-                "img": "assets/media/img/code/rubicdev.gif",
-                "url": "https://github.com/paradoxrevolver/rubicdev"
-            }, {
-                "name": "Beaker",
-                "desc": "A work-in-progress art program made using Electron and React.",
-                "img": "assets/media/img/code/beaker.png",
-                "url": "https://github.com/paradoxrevolver/beaker"
-            }, {
-                "name": "PolyominoSolver",
-                "desc": "A tool designed to solve polyomino fitting problems with an interface according to Google's material design. The UI wasn't finished, but the solver works in your browser's console.",
-                "img": "assets/media/img/code/polyominoSolver.png",
-                "url": "https://github.com/paradoxrevolver/polyominosolver"
-            }
-        ]
+        "frames": [{
+            "name": "rubic.dev",
+            "desc": "The site you're looking at now. Made using Jekyll, but otherwise programmed from scratch.",
+            "img": "assets/media/img/code/rubicdev.gif",
+            "url": "https://github.com/paradoxrevolver/rubicdev"
+        }, {
+            "name": "Beaker",
+            "desc": "A work-in-progress art program made using Electron and React.",
+            "img": "assets/media/img/code/beaker.png",
+            "url": "https://github.com/paradoxrevolver/beaker"
+        }, {
+            "name": "PolyominoSolver",
+            "desc": "A tool designed to solve polyomino fitting problems with an interface according to Google's material design. The UI wasn't finished, but the solver works in your browser's console.",
+            "img": "assets/media/img/code/polyominoSolver.png",
+            "url": "https://github.com/paradoxrevolver/polyominosolver"
+        }]
     },
 
     "sound": {
@@ -53,53 +49,49 @@
     },
 
     "design": {
-        "frames": [
-            {
-                "name": "Hex Stickers",
-                "desc": "A set of hexagonal stickers I made of various brands for my own personal use.",
-                "img": "assets/media/img/design/hexStickers.png"
-            }, {
-                "name": "Starlight",
-                "desc": "A trading card design intended to be used in an online card trading game called Starlight.",
-                "img": "assets/media/img/design/starlight.png"
-            }, {
-                "name": "Beaker",
-                "desc": "Various phases of design work for the UI of Beaker.",
-                "img": "assets/media/img/design/beaker.png"
-            }
-        ]
+        "frames": [{
+            "name": "Hex Stickers",
+            "desc": "A set of hexagonal stickers I made of various brands for my own personal use.",
+            "img": "assets/media/img/design/hexStickers.png"
+        }, {
+            "name": "Starlight",
+            "desc": "A trading card design intended to be used in an online card trading game called Starlight.",
+            "img": "assets/media/img/design/starlight.png"
+        }, {
+            "name": "Beaker",
+            "desc": "Various phases of design work for the UI of Beaker.",
+            "img": "assets/media/img/design/beaker.png"
+        }]
     },
 
     "gamedev": {
-        "frames": [
-            {
-                "name": "Timekeep",
-                "desc": "A Unity game completed in one week for Brackeys Jam 2020.2. I worked with three others, handling programming and project management. We placed #29 out of 1,850 entries.",
-                "img": "assets/media/img/gamedev/timekeep.png",
-                "url": "https://rubic.itch.io/timekeep"
-            }, {
-                "name": "Ghost King's Cross",
-                "desc": "A Unity game completed for Brackeys Jam 2021.2. I worked with four artists and a musician, again being responsible for programming and directing the project. We placed #46 out of 1,750 entries.",
-                "img": "assets/media/img/gamedev/gkc.png",
-                "url": "https://rubic.itch.io/ghost-kings-cross"
-            }, {
-                "name": "Spots and Ears",
-                "desc": "A narrative-focused platformer game demo that was created in Unity. I was the lone programmer working with a team of six artists.\n\nThe project was revealed at San Jose State University's SHMCon in February of 2020.",
-                "img": "assets/media/img/gamedev/spotsAndEars.png",
-                "url": "https://twitter.com/earsspots",
-                "old_url_2": "https://spotsandears.portfoliobox.net",
-                "old_url": "https://www.inbetweensjsubfa2020.org/student-projects/spots-ears"
-            }, {
-                "name": "pawb.in",
-                "desc": "An online, in-browser creature collection game. Currently a work in progress.",
-                "img": "assets/media/img/gamedev/pawbin.png",
-                "url": "https://pawb.in"
-            }, {
-                "name": "Dizzyship",
-                "desc": "A Unity game I completed in 48 hours for the GMTK Game Jam 2020. I worked solo and placed in the top 10% of 5,400 entries.",
-                "img": "assets/media/img/gamedev/dizzyship.png",
-                "url": "https://rubic.itch.io/dizzyship"
-            }
-        ]
+        "frames": [{
+            "name": "Timekeep",
+            "desc": "A Unity game completed in one week for Brackeys Jam 2020.2. I worked with three others, handling programming and project management. We placed #29 out of 1,850 entries.",
+            "img": "assets/media/img/gamedev/timekeep.png",
+            "url": "https://rubic.itch.io/timekeep"
+        }, {
+            "name": "Ghost King's Cross",
+            "desc": "A Unity game completed for Brackeys Jam 2021.2. I worked with four artists and a musician, again being responsible for programming and directing the project. We placed #46 out of 1,750 entries.",
+            "img": "assets/media/img/gamedev/gkc.png",
+            "url": "https://rubic.itch.io/ghost-kings-cross"
+        }, {
+            "name": "Spots and Ears",
+            "desc": "A narrative-focused platformer game demo that was created in Unity. I was the lone programmer working with a team of six artists.\n\nThe project was revealed at San Jose State University's SHMCon in February of 2020.",
+            "img": "assets/media/img/gamedev/spotsAndEars.png",
+            "url": "https://twitter.com/earsspots",
+            "old_url_2": "https://spotsandears.portfoliobox.net",
+            "old_url": "https://www.inbetweensjsubfa2020.org/student-projects/spots-ears"
+        }, {
+            "name": "pawb.in",
+            "desc": "An online, in-browser creature collection game. Currently a work in progress.",
+            "img": "assets/media/img/gamedev/pawbin.png",
+            "url": "https://pawb.in"
+        }, {
+            "name": "Dizzyship",
+            "desc": "A Unity game I completed in 48 hours for the GMTK Game Jam 2020. I worked solo and placed in the top 10% of 5,400 entries.",
+            "img": "assets/media/img/gamedev/dizzyship.png",
+            "url": "https://rubic.itch.io/dizzyship"
+        }]
     }
 }

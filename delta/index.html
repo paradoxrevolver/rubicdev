@@ -5,8 +5,16 @@ title:	"rubic.dev :: delta"
 <div class="island">
     <h1 class="title">delta</h1>
     <p>this is a hidden collection of smaller projects or work in progress stuff:</p>
+    <br>
+    <h3>tools</h3>
     <ul>
-        {% for item in site.data.delta-list %}
+        {% for item in site.data.delta-list.tools %}
+        <li><a href="{{item.link}}">{{item.title}}</a></li>
+        {% endfor %}
+    </ul>
+    <h3>demos</h3>
+    <ul>
+        {% for item in site.data.delta-list.demos %}
         <li><a href="{{item.link}}">{{item.title}}</a></li>
         {% endfor %}
     </ul>
