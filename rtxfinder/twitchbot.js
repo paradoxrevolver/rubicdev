@@ -10,7 +10,7 @@ $(function () { // ready function
 
     const tableHeaderRow = $("#chat-table-header-row")
 
-    performTests(tableHeaderRow);
+    //performTests(tableHeaderRow);
 
     client.connect().catch(console.error)
     client.on('message', (channel, tags, message, self) => {
