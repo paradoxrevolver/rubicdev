@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- hidden header page info -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="rubic, rubicdev, game, development, gamedev, game development, portfolio, paradox, revolver, paradoxrevolver">
+
+  <!-- visible header page info -->
+  <meta name="author" content="rubic">
+  <meta name="description" content="{{ page.description }}">
+  <link rel="shortcut icon" href="/assets/media/icon/penrose.ico" type="image/x-icon">
+  <meta name="theme-color" content="#032933" />
+  <title>{{ page.title }}</title>
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="/assets/css/reset-pr.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+  <!-- scripts -->
+  <script src="/assets/js/cash.min.js"></script>
+</head>
+
+<body>
+  <div id="layout" class="cover">
+      {{ content }}
+  </div>
+</body>
+</html>
+
+<style>
+  
+.cover {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+}
+
+</style>

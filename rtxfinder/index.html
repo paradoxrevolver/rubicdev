@@ -1,0 +1,135 @@
+---
+layout: plain
+title: "rubic.dev :: rtxfinder"
+description: "how to get a 3060ti"
+---
+
+
+<div id="content">
+    <h1>RTX 3060 Ti FINDER</h1>
+    <br>
+    <table id="chat-table">
+        <tbody>
+            <tr id="chat-table-header-row">
+                <td>TIME</td>
+                <td>PRICE</td>
+                <td>SELLER</td>
+                <td>QUALITY</td>
+                <td>MODEL</td>
+                <td>LINK</td>
+                <td>ATC</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <p><a href="/delta">back to delta</a></p>
+</div>
+
+<script src="./tmi.min.js"></script>
+<script src="./twitchbot.js"></script>
+
+<style>
+    @font-face {
+        font-family: Rubik;
+        src: url("/assets/media/font/Rubik-Regular.ttf");
+    }
+
+    :root {
+        --bg: rgb(27, 21, 34);
+        --bg-mid: rgb(41, 32, 54);
+        --primary: white;
+        --link: rgb(29, 244, 223);
+
+        --excellent: rgb(74, 174, 251);
+        --great: rgb(92, 205, 51);
+        --good: rgb(241, 223, 55);
+        --bad: rgb(248, 64, 73);
+    }
+
+    body {
+        background-color: var(--bg);
+        color: var(--primary);
+        font: 12pt Rubik;
+    }
+
+    h1 {
+        font: 18pt Rubik;
+    }
+
+    a {
+        color: var(--link);
+    }
+
+    a:hover {
+        color: var(--primary);
+    }
+
+    #layout {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 1280px) 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: ". content .";
+    }
+
+    #content {
+        grid-area: content;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        margin: 36pt;
+    }
+
+    #chat-table {
+        width: 100%;
+    }
+
+    #chat-table tr {
+        height: 30px;
+        text-align: center;
+        line-height: 2;
+    }
+
+    #chat-table tr:nth-child(odd) {
+        background-color: var(--bg-mid);
+    }
+
+    .price-excellent {
+        background-color: var(--excellent);
+    }
+
+    .price-great {
+        background-color: var(--great);
+    }
+
+    .price-good {
+        background-color: var(--good);
+    }
+
+    .price-bad {
+        background-color: var(--bad);
+    }
+
+    .price-cell {
+        color: var(--bg);
+        border-radius: 2pt;
+        font-weight: bold;
+        margin: 1px 0;
+        padding: 0 5px;
+    }
+
+    .bigger-button {
+        background-color: var(--link);
+        color: var(--bg);
+        border-radius: 2pt;
+        font-weight: bold;
+        margin: 1px 0;
+        padding: 0 20px;
+    }
+
+    .bigger-button:hover {
+        background-color: var(--primary);
+        color: var(--bg-mid);
+    }
+</style>
