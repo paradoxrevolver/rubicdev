@@ -17,44 +17,15 @@ title: "rubic.dev"
   </p>
 </div>
 
-<div id="art" class="island">
-  <h1 class="title"><a href="#art">art</a></h1>
+<div id="gamedev" class="island">
+  <h1 class="title"><a href="#gamedev">gamedev</a></h1>
 
-  <p>
-    I've been drawing since 2014. I've done some commission work in the past, but for the most part,
-    digital art remains a regular hobby of mine.
-  </p>
+  <p>I have a strong interest in pursuing many different disciplines, which is largely motivated by video game development.</p>
 
-  <p>
-    The vast majority of my work is done in Paint Tool SAI. I've also used other programs like Photoshop and
-    Clip Studio Paint.
-  </p>
-
-  <div class="art-gallery">
-    {% assign frames = site.data.home.art.frames %}
-    {% for frame in frames %}
-    <div class="frame border">
-      <img class="border-x" src="{{frame.img}}">
-      <div class="toolbar">
-        <a class="tool" href="{{frame.img}}" target="_blank"><i class="fas fa-file-image"></i></a>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
-
-<div id="code" class="island">
-  <h1 class="title"><a href="#code">code</a></h1>
-
-  <p>My first programming project was a small platformer video game made using SDL, which I started in 2012.</p>
-
-  <p>
-    Since then, I've picked up C++, Java, C#, Python, JavaScript, and several other programming languages. I
-    enjoy picking up new languages quickly and I'm always interested in learning something new.
-  </p>
+  <p>All of my recent games have been made in Unity, with the exception of web projects.</p>
 
   <div class="row-gallery">
-    {% assign frames = site.data.home.code.frames %}
+    {% assign frames = site.data.home.gamedev.frames %}
     {% for frame in frames %}
     <div class="frame">
       <a href="{{frame.url}}" target="_blank">
@@ -70,22 +41,6 @@ title: "rubic.dev"
       </a>
     </div>
     {% endfor %}
-  </div>
-</div>
-
-<div id="sound" class="island">
-  <h1 class="title"><a href="#sound">sound</a></h1>
-
-  <p>I started making short chiptune tracks in "tracker" music software in 2013.</p>
-
-  <p>
-    All of my recent work has been done in Renoise. I also have some experience with modern DAWs like FL Studio and 
-    Ableton Live.
-  </p>
-
-  <blockquote>The sound player here is a work in progress!</blockquote>
-
-  <div class="sound-gallery">
   </div>
 </div>
 
@@ -112,15 +67,34 @@ title: "rubic.dev"
   </div>
 </div>
 
-<div id="gamedev" class="island">
-  <h1 class="title"><a href="#gamedev">gamedev</a></h1>
+<div id="sound" class="island">
+  <h1 class="title"><a href="#sound">sound</a></h1>
 
-  <p>My interest in pursuing many different disciplines is motivated by video game development.</p>
+  <p>I started making short chiptune tracks in "tracker" music software in 2013.</p>
 
-  <p>All of my recent games have been made in Unity.</p>
+  <p>
+    All of my recent work has been done in Renoise. I also have some experience with modern DAWs like FL Studio and 
+    Ableton Live.
+  </p>
+
+  <blockquote>The sound player here is a work in progress!</blockquote>
+
+  <div class="sound-gallery">
+  </div>
+</div>
+
+<div id="code" class="island">
+  <h1 class="title"><a href="#code">code</a></h1>
+
+  <p>I started my very first programming project in 2012, with a small platformer video game written in C using SDL.</p>
+
+  <p>
+    Since then, I've picked up C++, C#, Java, Python, JavaScript, and several others. I
+    enjoy the process of learning a new language and I'm always interested in picking up something new!
+  </p>
 
   <div class="row-gallery">
-    {% assign frames = site.data.home.gamedev.frames %}
+    {% assign frames = site.data.home.code.frames %}
     {% for frame in frames %}
     <div class="frame">
       <a href="{{frame.url}}" target="_blank">
@@ -134,6 +108,32 @@ title: "rubic.dev"
           </div>
         </div>
       </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div id="art" class="island">
+  <h1 class="title"><a href="#art">art</a></h1>
+
+  <p>
+    I've been drawing since 2014. I've done some commission work in the past, but for the most part,
+    digital art remains a hobby of mine.
+  </p>
+
+  <p>
+    The vast majority of my work is done in Paint Tool SAI. I've also used programs like Photoshop and
+    Clip Studio Paint.
+  </p>
+
+  <div class="art-gallery">
+    {% assign frames = site.data.home.art.frames %}
+    {% for frame in frames %}
+    <div class="frame border">
+      <img class="border-x" src="{{frame.img}}">
+      <div class="toolbar">
+        <a class="tool" href="{{frame.img}}" target="_blank"><i class="fas fa-file-image"></i></a>
+      </div>
     </div>
     {% endfor %}
   </div>
