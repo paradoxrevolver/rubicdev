@@ -66,13 +66,18 @@
 
     "gamedev": {
         "frames": [{
+            "name": "Cairn",
+            "desc": "A Godot game completed for Brackeys Jam 2022.2. I worked with four others, handling gameplay programming and game design. We placed in the top 1.5% of 1,100 entries and earned top 10 in both Graphics and Audio.",
+            "img": "assets/media/img/gamedev/cairn.png",
+            "url": "https://rubic.itch.io/cairn"
+        }, {
             "name": "Timekeep",
-            "desc": "A Unity game completed in one week for Brackeys Jam 2020.2. I worked with three others, handling programming and project management. We placed #29 out of 1,850 entries.",
+            "desc": "A Unity game completed for Brackeys Jam 2020.2. I worked with three others, handling programming and project management. We placed in the top 2% of 1,800 entries.",
             "img": "assets/media/img/gamedev/timekeep.png",
             "url": "https://rubic.itch.io/timekeep"
         }, {
             "name": "Ghost King's Cross",
-            "desc": "A Unity game completed for Brackeys Jam 2021.2. I worked with four artists and a musician, again being responsible for programming and directing the project. We placed #46 out of 1,750 entries.",
+            "desc": "A Unity game completed for Brackeys Jam 2021.2. I worked with four artists and a musician, again being responsible for programming and directing the project. We placed in the top 3% of 1,700 entries.",
             "img": "assets/media/img/gamedev/gkc.png",
             "url": "https://rubic.itch.io/ghost-kings-cross"
         }, {
@@ -87,7 +92,9 @@
             "desc": "An online, in-browser creature collection game. Currently a work in progress.",
             "img": "assets/media/img/gamedev/pawbin.png",
             "url": "https://pawb.in"
-        }, {
+        }],
+
+        "old-frames": [{
             "name": "Dizzyship",
             "desc": "A Unity game I completed in 48 hours for the GMTK Game Jam 2020. I worked solo and placed in the top 10% of 5,400 entries.",
             "img": "assets/media/img/gamedev/dizzyship.png",
