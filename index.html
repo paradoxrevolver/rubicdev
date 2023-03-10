@@ -3,7 +3,7 @@ layout: main
 title: "rubic.dev"
 ---
 <div id="me" class="island">
-  <h1 class="title"><a href="#me">me</a></h1>
+  <h1 class="title"><a href="#me">ABOUT ME</a></h1>
 
   <p>My name is rubic, or you can call me Adam.</p>
 
@@ -12,13 +12,13 @@ title: "rubic.dev"
   <p>I'm an artist, a programmer, and a game designer. I like making clever tools and games!</p>
 
   <p>
-    At the end of 2020, I graduated <em>summa cum laude</em> from San Jose State University with a BS in Software
+    I graduated <em>summa cum laude</em> from San Jose State University with a BS in Software
     Engineering and a minor in Mathematics.
   </p>
 </div>
 
 <div id="gamedev" class="island">
-  <h1 class="title"><a href="#gamedev">gamedev</a></h1>
+  <h1 class="title"><a href="#gamedev">GAME DEVELOPMENT</a></h1>
 
   <p>I have a strong interest in pursuing many different disciplines, which is largely motivated by video game development.</p>
 
@@ -44,47 +44,8 @@ title: "rubic.dev"
   </div>
 </div>
 
-<div id="design" class="island">
-  <h1 class="title"><a href="#design">design</a></h1>
-
-  <p>I've done graphic design work for my university and for many personal projects.</p>
-
-  <p>
-    The online Figma editor has been my go-to for designing prints and web interfaces. I've also used Illustrator and Inkscape 
-    for other vector work, as well as Paint.NET for standard raster image editing.
-  </p>
-
-  <div class="art-gallery">
-    {% assign frames = site.data.home.design.frames %}
-    {% for frame in frames %}
-    <div class="frame border">
-      <img class="border-x" src="{{frame.img}}">
-      <div class="toolbar">
-        <a class="tool" href="{{frame.img}}" target="_blank"><i class="far fa-file-image"></i></a>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
-
-<div id="sound" class="island">
-  <h1 class="title"><a href="#sound">sound</a></h1>
-
-  <p>I started making short chiptune tracks in "tracker" music software in 2013.</p>
-
-  <p>
-    All of my recent work has been done in Renoise. I also have some experience with modern DAWs like FL Studio and 
-    Ableton Live.
-  </p>
-
-  <blockquote>The sound player here is a work in progress!</blockquote>
-
-  <div class="sound-gallery">
-  </div>
-</div>
-
 <div id="code" class="island">
-  <h1 class="title"><a href="#code">code</a></h1>
+  <h1 class="title"><a href="#code">CODING TOOLS</a></h1>
 
   <p>I started my very first programming project in 2012, with a small platformer video game written in C using SDL.</p>
 
@@ -113,8 +74,47 @@ title: "rubic.dev"
   </div>
 </div>
 
+<div id="sound" class="island">
+  <h1 class="title"><a href="#sound">AUDIO DESIGN</a></h1>
+
+  <p>I started making short chiptune tracks in "tracker" music software in 2013.</p>
+
+  <p>
+    All of my recent work has been done in Renoise. I also have some experience with modern DAWs like FL Studio and 
+    Ableton Live.
+  </p>
+
+  <blockquote>The sound player here is a work in progress!</blockquote>
+
+  <div class="sound-gallery">
+  </div>
+</div>
+
+<div id="design" class="island">
+  <h1 class="title"><a href="#design">GRAPHIC DESIGN</a></h1>
+
+  <p>I've done graphic design work for my university and for many personal projects.</p>
+
+  <p>
+    The online Figma editor has been my go-to for designing prints and web interfaces. I've also used Illustrator and Inkscape 
+    for other vector work, as well as Paint.NET for standard raster image editing.
+  </p>
+
+  <div class="art-gallery">
+    {% assign frames = site.data.home.design.frames %}
+    {% for frame in frames %}
+    <div class="frame border">
+      <img class="border-x" src="{{frame.img}}">
+      <div class="toolbar">
+        <a class="tool" href="{{frame.img}}" target="_blank"><i class="far fa-file-image"></i></a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
 <div id="art" class="island">
-  <h1 class="title"><a href="#art">art</a></h1>
+  <h1 class="title"><a href="#art">DIGITAL ART</a></h1>
 
   <p>
     I've been drawing since 2014. I've done some commission work in the past, but for the most part,

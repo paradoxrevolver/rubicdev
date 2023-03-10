@@ -117,30 +117,30 @@ var penrose = function(canvas) {
         bgColorHover: "#a21620",
         url: "me",
       }, {
-        text: "ART",
+        text: "DEV",
         textColorHover: "#ffe37f",
         bgColorHover: "#cf7037",
-        url: "art",
+        url: "gamedev",
       }, {
         text: "CODE",
         textColorHover: "#000000",
         bgColorHover: "#eab238",
         url: "code",
       }, {
-        text: "SOUND",
+        text: "AUDIO",
         textColorHover: "#d2ff6c",
         bgColorHover: "#11a55c",
         url: "sound",
       }, {
-        text: "DESIGN",
+        text: "VECTOR",
         textColorHover: "#6af6ff",
         bgColorHover: "#3c60bd",
         url: "design",
       }, {
-        text: "GAMEDEV",
+        text: "GALLERY",
         textColorHover: "#ff96ff",
         bgColorHover: "#6942c6",
-        url: "gamedev",
+        url: "art",
       },
     ];
 

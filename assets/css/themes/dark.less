@@ -415,6 +415,35 @@ nav .link-list {
     
     &.focus { flex: 10 1 64px; }
   }
+    
+  // the hover over lighting effect
+  .frame:hover::after {
+    opacity: 100%;
+  }
+
+  .frame::after {
+    opacity: 0%;
+    transition-duration: @time-sm * 0.75;
+
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    border: 3px solid white;
+    border-radius: 1px;
+    box-sizing: border-box;
+    background: linear-gradient(
+      to bottom, 
+      rgba(65, 211, 255, 0.2) 0%,
+      transparent 30%, 
+      transparent 80%, 
+      rgba(0, 247, 255, 0.3) 100%
+    );
+    mix-blend-mode: lighten;
+  }
   
   // art gallery on smaller displays
   @media @sm {
@@ -513,16 +542,20 @@ nav .link-list {
   }
 
   .frame::after {
+    opacity: 0%;
+    transition-duration: @time-sm;
+
     content: "";
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 100%;
-    opacity: 0%;
-    background: linear-gradient(to bottom, transparent 50%, rgba(0, 247, 255, 0.07) 100%);
-    transition-duration: @time-sm;
-    border-radius: 2px;
     pointer-events: none;
+
+    border: 3px solid white;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 247, 255, 0.07) 100%);
   }
 }
 
