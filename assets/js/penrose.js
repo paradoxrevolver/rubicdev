@@ -127,7 +127,7 @@ var penrose = function(canvas) {
         bgColorHover: "#eab238",
         url: "code",
       }, {
-        text: "AUDIO",
+        text: "SOUND",
         textColorHover: "#d2ff6c",
         bgColorHover: "#11a55c",
         url: "sound",
@@ -137,7 +137,7 @@ var penrose = function(canvas) {
         bgColorHover: "#3c60bd",
         url: "design",
       }, {
-        text: "GALLERY",
+        text: "ARTWORK",
         textColorHover: "#ff96ff",
         bgColorHover: "#6942c6",
         url: "art",
