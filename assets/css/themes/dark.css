@@ -94,16 +94,15 @@ blockquote {
 }
 ::-webkit-scrollbar-thumb {
   background: hsl(0, 0%, 100%);
+  border-radius: 6px 0 0 6px;
 }
 body {
   scrollbar-color: hsl(0, 0%, 100%) hsla(0, 0%, 0%, 0.01);
-  scrollbar-width: 3px;
+  scrollbar-width: 12px;
 }
 /* GENERAL CLASSES */
 .cover {
-  position: relative;
-  top: 0;
-  left: 0;
+  width: 100%;
   min-height: 100%;
 }
 .border {
@@ -119,6 +118,12 @@ body {
 .border-r {
   box-shadow: 0 0 12px hsla(189, 100%, 51%, 0.15);
   border-right: 1px solid hsl(0, 0%, 100%);
+}
+.bg-grad-1 {
+  background: linear-gradient(#1d212d, #032b35);
+}
+.bg-grad-2 {
+  background: linear-gradient(#18202b, #032f3a);
 }
 .island {
   box-sizing: border-box;

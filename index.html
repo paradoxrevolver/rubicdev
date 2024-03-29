@@ -2,142 +2,171 @@
 layout: main
 title: "rubic.dev"
 ---
+
 <div id="me" class="island">
-  <h1 class="title"><a href="#me">ABOUT ME</a></h1>
+    <h1 class="title"><a href="#me">ABOUT ME</a></h1>
 
-  <p>My name is rubic, or you can call me Adam.</p>
+    <p>My name is rubic, or you can call me Adam.</p>
 
-  <p>This website is rubic.dev, home to all the projects and parts I've worked on over the years.</p>
+    <p>
+        This website is rubic.dev, home to all the projects and parts I've
+        worked on over the years.
+    </p>
 
-  <p>I'm a game designer, a programmer, and an artist. I like making useful tools and clever games!</p>
+    <p>
+        I'm a game designer, a programmer, and an artist. I like making useful
+        tools and clever games!
+    </p>
 
-  <p>
-    I graduated <em>summa cum laude</em> from San Jose State University with a BS in Software
-    Engineering and a minor in Mathematics.
-  </p>
+    <p>
+        I graduated <em>summa cum laude</em> from San Jose State University with
+        a BS in Software Engineering and a minor in Mathematics.
+    </p>
 </div>
 
 <div id="gamedev" class="island">
-  <h1 class="title"><a href="#gamedev">GAME DEVELOPMENT</a></h1>
+    <h1 class="title"><a href="#gamedev">GAME DEVELOPMENT</a></h1>
 
-  <p>
-    I have a persistent interest in mastering many different disciplines, 
-    a passion which is greatly motivated by wanting to work in video game development.
-  </p>
+    <p>
+        I have a persistent interest in mastering many different disciplines, a
+        passion which is greatly motivated by wanting to work in video game
+        development.
+    </p>
 
-  <p>All of my recent games have been made in Unity, with the exception of web projects.</p>
+    <p>
+        All of my recent games have been made in Unity, with the exception of
+        web projects.
+    </p>
 
-  <div class="row-gallery">
-    {% assign frames = site.data.home.gamedev.frames %}
-    {% for frame in frames %}
-    <div class="frame">
-      <a href="{{frame.url}}" target="_blank">
-        <div class="preview border">
-          <div class="border-r">
-            <img src="{{frame.img}}">
-          </div>
-          <div class="description">
-            <h3>{{frame.name}}</h3>
-            <p>{{frame.desc}}</p>
-          </div>
+    <div class="row-gallery">
+        {% assign frames = site.data.home.gamedev.frames %} {% for frame in
+        frames %}
+        <div class="frame">
+            <a href="{{frame.url}}" target="_blank">
+                <div class="preview border">
+                    <div class="border-r">
+                        <img src="{{frame.img}}" />
+                    </div>
+                    <div class="description">
+                        <h3>{{frame.name}}</h3>
+                        <p>{{frame.desc}}</p>
+                    </div>
+                </div>
+            </a>
         </div>
-      </a>
+        {% endfor %}
     </div>
-    {% endfor %}
-  </div>
 </div>
 
 <div id="code" class="island">
-  <h1 class="title"><a href="#code">USEFUL TOOLS</a></h1>
+    <h1 class="title"><a href="#code">USEFUL TOOLS</a></h1>
 
-  <p>I started my very first programming project in 2012 with a small platformer video game written in C.</p>
+    <p>
+        I started my very first programming project in 2012 with a small
+        platformer video game written in C.
+    </p>
 
-  <p>
-    Since then, I've explored writing in C++, C#, Java, Kotlin, Python, JavaScript, and many other programming languages.
-    I love the process of learning a new language and I'm always interested in picking up something new!
-  </p>
+    <p>
+        Since then, I've explored writing in C++, C#, Java, Kotlin, Python,
+        JavaScript, and many other programming languages. I love the process of
+        learning a new language and I'm always interested in picking up
+        something new!
+    </p>
 
-  <div class="row-gallery">
-    {% assign frames = site.data.home.code.frames %}
-    {% for frame in frames %}
-    <div class="frame">
-      <a href="{{frame.url}}" target="_blank">
-        <div class="preview border">
-          <div class="border-r">
-            <img src="{{frame.img}}">
-          </div>
-          <div class="description">
-            <h3>{{frame.name}}</h3>
-            <p>{{frame.desc}}</p>
-          </div>
+    <div class="row-gallery">
+        {% assign frames = site.data.home.code.frames %} {% for frame in frames
+        %}
+        <div class="frame">
+            <a href="{{frame.url}}" target="_blank">
+                <div class="preview border">
+                    <div class="border-r">
+                        <img src="{{frame.img}}" />
+                    </div>
+                    <div class="description">
+                        <h3>{{frame.name}}</h3>
+                        <p>{{frame.desc}}</p>
+                    </div>
+                </div>
+            </a>
         </div>
-      </a>
+        {% endfor %}
     </div>
-    {% endfor %}
-  </div>
 </div>
 
 <div id="sound" class="island">
-  <h1 class="title"><a href="#sound">SOUND DESIGN</a></h1>
+    <h1 class="title"><a href="#sound">SOUND DESIGN</a></h1>
 
-  <p>I started making short chiptune tracks in "tracker" music software in 2013.</p>
+    <p>
+        I started making short chiptune tracks in "tracker" music software in
+        2013.
+    </p>
 
-  <p>
-    All of my recent work has been done in Renoise. I also have some experience with modern DAWs like FL Studio and 
-    Ableton Live.
-  </p>
+    <p>
+        All of my recent work has been done in Renoise. I also have some
+        experience with modern DAWs like FL Studio and Ableton Live.
+    </p>
 
-  <blockquote>The sound player here is a work in progress!</blockquote>
+    <blockquote>The sound player here is a work in progress!</blockquote>
 
-  <div class="sound-gallery">
-  </div>
+    <div class="sound-gallery"></div>
 </div>
 
 <div id="design" class="island">
-  <h1 class="title"><a href="#design">GRAPHIC DESIGN</a></h1>
+    <h1 class="title"><a href="#design">GRAPHIC DESIGN</a></h1>
 
-  <p>I've done graphic design work for my university and for many personal projects.</p>
+    <p>
+        I've done graphic design work for my university and for many personal
+        projects.
+    </p>
 
-  <p>
-    The online Figma editor has been my go-to for designing web interfaces, program layouts, and graphics for print. 
-    I've used Illustrator and Inkscape for other vector work, as well as Paint.NET for standard raster image editing.
-  </p>
+    <p>
+        The online Figma editor has been my go-to for designing web interfaces,
+        program layouts, and graphics for print. I've used Illustrator and
+        Inkscape for other vector work, as well as Paint.NET for standard raster
+        image editing.
+    </p>
 
-  <div class="art-gallery">
-    {% assign frames = site.data.home.design.frames %}
-    {% for frame in frames %}
-    <div class="frame border">
-      <img class="border-x" src="{{frame.img}}">
-      <div class="toolbar">
-        <a class="tool" href="{{frame.img}}" target="_blank"><i class="far fa-file-image"></i></a>
-      </div>
+    <div class="art-gallery">
+        {% assign frames = site.data.home.design.frames %} {% for frame in
+        frames %}
+        <div class="frame border">
+            <img class="border-x" src="{{frame.img}}" />
+            <div class="toolbar">
+                <a class="tool" href="{{frame.img}}" target="_blank"
+                    ><i class="far fa-file-image"></i
+                ></a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-  </div>
 </div>
 
 <div id="art" class="island">
-  <h1 class="title"><a href="#art">DIGITAL ART</a></h1>
+    <h1 class="title"><a href="#art">DIGITAL ART</a></h1>
 
-  <p>
-    I've been drawing since 2014. I've done some commissioned work in the past, but for the most part,
-    digital art is just a prominent hobby of mine.
-  </p>
+    <p>
+        I've been drawing since 2014. I've done some commissioned work in the
+        past, but for the most part, digital art is just a prominent hobby of
+        mine.
+    </p>
 
-  <p>
-    I use Paint Tool SAI and Clip Studio Paint for digital drawings and paintings, and
-    I've used Photoshop and Krita for touch ups and animation work.
-  </p>
+    <p>
+        I use Paint Tool SAI and Clip Studio Paint for digital drawings and
+        paintings, and I've used Photoshop and Krita for touch ups and animation
+        work.
+    </p>
 
-  <div class="art-gallery">
-    {% assign frames = site.data.home.art.frames %}
-    {% for frame in frames %}
-    <div class="frame border">
-      <img class="border-x" src="{{frame.img}}">
-      <div class="toolbar">
-        <a class="tool" href="{{frame.img}}" target="_blank"><i class="fas fa-file-image"></i></a>
-      </div>
+    <div class="art-gallery">
+        {% assign frames = site.data.home.art.frames %} {% for frame in frames
+        %}
+        <div class="frame border">
+            <img class="border-x" src="{{frame.img}}" />
+            <div class="toolbar">
+                <a class="tool" href="{{frame.img}}" target="_blank"
+                    ><i class="fas fa-file-image"></i
+                ></a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-  </div>
 </div>

@@ -1,52 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+    <head>
+        <!-- hidden header page info -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="keywords"
+            content="rubic, rubicdev, game, development, gamedev, game development, portfolio, paradox, revolver, paradoxrevolver"
+        />
 
-<head>
-  <!-- hidden header page info -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="rubic, rubicdev, game, development, gamedev, game development, portfolio, paradox, revolver, paradoxrevolver">
+        <!-- visible header page info -->
+        <meta name="author" content="rubic" />
+        <meta
+            name="description"
+            content="A portfolio website housing my collection of art and programming projects over the years."
+        />
+        <link
+            rel="shortcut icon"
+            href="/assets/media/icon/penrose.ico"
+            type="image/x-icon"
+        />
+        <meta name="theme-color" content="#032933" />
+        <title>{{ page.title }}</title>
 
-  <!-- visible header page info -->
-  <meta name="author" content="rubic">
-  <meta name="description" content="A portfolio website housing my collection of art and programming projects over the years.">
-  <link rel="shortcut icon" href="/assets/media/icon/penrose.ico" type="image/x-icon">
-  <meta name="theme-color" content="#032933" />
-  <title>{{ page.title }}</title>
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="/assets/css/reset-pr.css" />
+        <link rel="stylesheet" href="/assets/css/themes/dark.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        />
 
-  <!-- stylesheets -->
-  <link rel="stylesheet" href="/assets/css/reset-pr.css">
-  <link rel="stylesheet" href="/assets/css/themes/dark.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <!-- scripts -->
+        <script src="/assets/js/cash.min.js"></script>
+        <script src="/assets/js/p5.min.js"></script>
+        <script src="/assets/js/art-gallery.js"></script>
+    </head>
 
-  <!-- scripts -->
-  <script src="/assets/js/cash.min.js"></script>
-  <script src="/assets/js/art-gallery.js"></script>
-  
-</head>
-
-<body>
-  <div id="layout" class="cover">
-    <div id="navigation-column" class="border-x">
-      <nav>
-        {% include penrose-nav.html %}
-        <div class="link-list">
-          <ul>
-            {% for item in site.data.link-list %}
-              {% if item.rank == "important" %}
-              <li class="important"><a href="{{item.link}}" target="_blank">{{item.title}}</a></li>
-              {% else %}
-              <li class="normal"><a href="{{item.link}}" target="_blank">{{item.title}}</a></li>
-              {% endif %}
-            {% endfor %}
-          </ul>
+    <body>
+        <div id="layout" class="cover">
+            <div id="navigation-column" class="border-x">
+                <nav>
+                    {% include penrose-nav.html %}
+                    <div class="link-list">
+                        <ul>
+                            {% for item in site.data.link-list %} {% if
+                            item.rank == "important" %}
+                            <li class="important">
+                                <a href="{{item.link}}" target="_blank"
+                                    >{{item.title}}</a
+                                >
+                            </li>
+                            {% else %}
+                            <li class="normal">
+                                <a href="{{item.link}}" target="_blank"
+                                    >{{item.title}}</a
+                                >
+                            </li>
+                            {% endif %} {% endfor %}
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div id="content">{{ content }}</div>
         </div>
-      </nav>
-    </div>
-    <div id="content">
-      {{ content }}
-    </div>
-  </div>
-</body>
+    </body>
 </html>
