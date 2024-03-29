@@ -23,6 +23,9 @@ good css defaults, pretty typical for a lot of web developers but i felt like me
 ##### [Cash](https://github.com/kenwheeler/cash)
 a reduced size jQuery alternative because i only needed some of the most convenient jQuery features.
 
+##### [p5.js](https://p5js.org/)
+a library for HTML canvas manipulation, just because i wanted to learn what kinds of features it has.
+
 ### development dependencies
 any code that isn't my own but was used purely for the development of the website and doesn't show up in the website's files is here.
 
