@@ -14,6 +14,9 @@ i made a number of useful things to get the site looking the way i wanted it to 
 ##### penrose.js
 this code picks up any div with a class name of "penrose-canvas" and places a spinning penrose triangle navigation. this was originally a project i poured a ton of time into on [jsfiddle](https://jsfiddle.net/) before i really understood any javascript, so it was a neat introduction to the basics of js, jquery, and canvas. clicking buttons in the navigation just scrolls to an anchor on the page, since that's all i needed it for.
 
+##### starfield.js
+this is the background effect of the website, and similarly pickes up a "starfield" div and places a screen-wide canvas of stars. this project was drawn up with the original version of the website, but didn't get implemented until about 6 years later. oops!
+
 ### dependencies
 any code that isn't my own and shows up in my website files is here.
 
