@@ -1,4 +1,22 @@
 <!-- include block that generates a starfield background -->
-<div class="starfield">
-    <script src="/assets/js/starfield.js"></script>
-</div>
+<style>
+    .starfield {
+        mix-blend-mode: overlay;
+        width: 100%;
+    }
+
+    .starfield > canvas {
+        display: block;
+    }
+
+    body > .starfield {
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<div class="starfield"></div>
+<script src="/assets/js/starfield.js"></script>
