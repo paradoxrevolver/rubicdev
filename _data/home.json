@@ -5,9 +5,9 @@
             "desc": "A drawing I made for my friend torcado.",
             "img": "assets/media/img/art/ricket.png"
         }, {
-            "name": "band",
-            "desc": "A collection of my characters in a school band.",
-            "img": "assets/media/img/art/band.png"
+            "name": "halloween",
+            "desc": "A gift I drew for a friend for Halloween.",
+            "img": "assets/media/img/art/halloween.png"
         }, {
             "name": "wonder",
             "desc": "A perspective piece I did of one of my characters when I was experimenting with coloring lines.",
@@ -66,6 +66,11 @@
 
     "gamedev": {
         "frames": [{
+            "name": "Switchblade",
+            "desc": "A Godot game completed for Pirate Jam 16. I was the team lead and level designer for a team of five. We became the most popular entry out of all 1,800 submissions.",
+            "img": "assets/media/img/gamedev/switchblade.png",
+            "url": "https://rubic.itch.io/switchblade"
+        }, {
             "name": "Starwind Shrine",
             "desc": "A Unity game completed for the Lv. 99 Game Jam 2023. I worked with four others as the team manager, lead designer and programmer. We placed #8 out of 330 entries.",
             "img": "assets/media/img/gamedev/starwindShrine.png",
@@ -85,16 +90,16 @@
             "desc": "A Unity game completed for Brackeys Jam 2020.2. I worked with three others, handling programming and project management. We placed in the top 2% of 1,800 entries.",
             "img": "assets/media/img/gamedev/timekeep.png",
             "url": "https://rubic.itch.io/timekeep"
-        }, {
+        }],
+
+        "old-frames": [{
             "name": "Spots and Ears",
             "desc": "A narrative-focused platformer game demo that was created in Unity. I was the lone programmer working with a team of six artists.\n\nThe project was revealed at San Jose State University's SHMCon in February of 2020.",
             "img": "assets/media/img/gamedev/spotsAndEars.png",
             "url": "https://twitter.com/earsspots",
             "old_url_2": "https://spotsandears.portfoliobox.net",
             "old_url": "https://www.inbetweensjsubfa2020.org/student-projects/spots-ears"
-        }],
-
-        "old-frames": [{
+        }, {
             "name": "Dizzyship",
             "desc": "A Unity game I completed in 48 hours for the GMTK Game Jam 2020. I worked solo and placed in the top 10% of 5,400 entries.",
             "img": "assets/media/img/gamedev/dizzyship.png",
